@@ -1,4 +1,4 @@
-# AWS Docker Infrastructure
+# 🚜 AWS Docker Infrastructure
 
 ### Main branch structure:
 1. [Fargate](./fargate/README.md)
