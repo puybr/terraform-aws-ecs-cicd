@@ -28,6 +28,7 @@
 - [x] **CodePipeline**
 - [x] **CodeBuild**
 - [x] **CodeDeploy**
+    - Blue/Green Deployment
 - [x] **Codestar Connection**
 - [X] **IAM Policies & Roles**
 - [X] **S3 Bucket Artifacts**
