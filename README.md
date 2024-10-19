@@ -5,7 +5,8 @@
 2. [CodePipeline](./codepipeline/README.md)
 3. [NodeJS Express App](./fargate/docker/nodejs-express/README.md)
 
-#### **IaC - [Fargate](./fargate/README.md)**:
+### AWS Resources:
+#### **[Fargate](./fargate/README.md)**:
 - [x] **Virtual Private Cloud** (VPC)
     - Subnets
     - Internet Gateway
