@@ -40,11 +40,11 @@ resource "aws_codedeploy_deployment_group" "frontend" {
       }
 
       target_group {
-        name = "${var.lb_target_group_green}"
+        name = "${var.lb_target_group_blue}"
       }
 
       target_group {
-        name = "${var.lb_target_group_blue}"
+        name = "${var.lb_target_group_green}"
       }
     }
   }
