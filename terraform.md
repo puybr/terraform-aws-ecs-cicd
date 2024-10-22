@@ -130,7 +130,7 @@ instance_type = var.environment == "prod" ? "t2.macro" : "t2.nano"
 - For each environment, create a "tfvars" file:
 ```sh
 test.tfvars
-trng.tfvars
+stag.tfvars
 prod.tfvars
 ```
 - Based on the environment, run apply using the variable file:
@@ -143,17 +143,10 @@ The state is stored in the default "`terraform.tfstate`" file
 List the local Terraform state:
 ```sh
 $ terraform state list
-aws_alb.main
-aws_alb_listener.http_front_end
-aws_alb_listener.https_front_end
-aws_alb_target_group.blue["0"]
-aws_alb_target_group.green["0"]
-aws_lb_listener_rule.host_based_weighted_routing["0"]
-aws_security_group.lb
 ```
-The remote Terraform state is stored in the S3 bucket backend
-The DynamoDB table supports state locking, consistency checking and can configure multiple remote state files
-Add the backend config to the "terraform.tf" providers file:
+- The remote Terraform state is stored in the S3 bucket backend
+- The DynamoDB table supports state locking, consistency checking and can configure multiple remote state files
+- Add the backend config to the "`terraform.tf`" providers file:
 ```tf
 # terraform {
     backend "s3" {
@@ -166,8 +159,8 @@ Add the backend config to the "terraform.tf" providers file:
     }
 # }
 ```
-Migrate the Terraform state file from one backend to another:
-terraform init -migrate-state
+- Migrate the Terraform state file from one backend to another:
+`terraform init -migrate-state`
 # Terraform Workspaces
 - Terraform starts with a single "`default`" workspace that cannot be deleted:
 ```sh
