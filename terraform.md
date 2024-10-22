@@ -97,12 +97,13 @@ $ tree
 `-- variables.tf
 ```
 ### Initialize and plan the module
-Initialize the Terrform module in the root module directory:
+- Initialize the Terrform module in the root module directory:
 `terraform init`
-Validate the configuration files:
+- Validate the configuration files:
 `terraform validate`
-Plan the changes:
+- Plan the changes:
 `terraform plan`
+
 ### Override default variables
 - _Option 1_: Add a "`terraform.tfvars`" file to override multiple default variables:
 ```tf
