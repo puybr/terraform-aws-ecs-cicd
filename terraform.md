@@ -84,9 +84,10 @@ resource "aws_ecs_cluster" "example" {
     name = "${var.environment}-${var.ecs_cluster_name}"
 }
 ```
-Check the Terraform Registry for more information about AWS resources!
 
-Module Structure
+> Check the Terraform Registry for more information about AWS resources!
+
+Module Structure:
 ```sh
 $ tree
 .
