@@ -1,31 +1,31 @@
-AWS CLI Setup
+# AWS CLI Setup
 Install and configure AWS CLI
 Optional - Create an additional AWS CLI profile:
-nano ~/.aws/credentials
+`nano ~/.aws/credentials`
 
-```
+```sh
 [profile-name]
 aws_access_key_id = XXXXXX
-aws_secret_access_key = XXXXXX
-nano ~/.aws/config
+aws_secret_access_key = XXXXX
 ```
+`nano ~/.aws/config`
+
 ```
 [profile-name]
 region = eu-west-2
 output = json
 ```
-Terraform Local Setup
-Install Chocolatey:
-Install JQ on Windows bash to run scripts in AWS
+### Terraform Local Setup
+Install Chocolatey
 Install Terraform:
-choco install terraform
+`choco install terraform`
 Verify the installation:
-terraform -version
+`terraform -version`
 Make a new module:
-mkdir my_terraform_module
-cd my_terraform_module
-Add the AWS terraform providers "terraform.tf" file:
-```
+`mkdir my_terraform_module`
+`cd my_terraform_module`
+Add the AWS terraform providers "`terraform.tf`" file:
+```tf
 terraform {
   required_providers {
     aws = {
@@ -41,8 +41,8 @@ provider "aws" {
   profile = "profile-name"
 }
 ```
-Add the "main.tf" file:
-```
+Add the "`main.tf`" file:
+```tf
 # Retrieve availability zones for the current region
 data "aws_availability_zones" "available" {}
  
@@ -54,8 +54,8 @@ locals {
     account_id = data.aws_caller_identity.current.account_id
 }
 ```
-Add the "variable.tf" file:
-```
+Add the "`variable.tf`" file:
+```tf
 variable "aws_region" {
   description = "Default AWS region"
   type = string
@@ -76,8 +76,8 @@ variable "ecs_cluster_name" {
 ```
 Example - Create an ECS Cluster
 
-Add an "ecs.tf" file:
-```
+Add an "`ecs.tf`" file:
+```tf
 resource "aws_ecs_cluster" "example" {
     name = "${var.environment}-${var.ecs_cluster_name}"
 }
@@ -85,7 +85,7 @@ resource "aws_ecs_cluster" "example" {
 Check the Terraform Registry for more information about AWS resources!
 
 Module Structure
-```
+```sh
 $ tree
 .
 |-- ecs.tf
@@ -93,24 +93,29 @@ $ tree
 |-- terraform.tf
 `-- variables.tf
 ```
-Initialize and plan the module
+### Initialize and plan the module
 Initialize the Terrform module in the root module directory:
-terraform init
+`terraform init`
 Validate the configuration files:
-terraform validate
+`terraform validate`
 Plan the changes:
-terraform plan
+`terraform plan`
 Override default variables
-Option 1: Add a "terraform.tfvars" file to override multiple default variables:
+Option 1: Add a "`terraform.tfvars`" file to override multiple default variables:
+```tf
 environment="test"
+```
 Option 2: Override specific variables in the CLI:
+```tf
 $ terraform plan -var environment="test"
+```
 Apply the module
-terraform apply
-terraform apply -var environment="test"
+`terraform apply`
+`terraform apply -var environment="test"`
 Destroy the module
-terraform destroy
-Terraform Variables
+`terraform destroy`
+
+###Terraform Variables
 Terraform will automatically load any files with "*.auto.tfvars" and "terraform.tfvars"
 The "variable.tf" file needs to have all the variables declared which can have a default value or not
 The ".tfvars" file is one way of associating variables to an environment
