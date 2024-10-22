@@ -137,10 +137,10 @@ prod.tfvars
 ```sh
 $ terraform apply -var-file="test.tfvars"
 ```
-### Terraform State
-Terraform uses state data to remember which object corresponds to each resource in the configuration
-The state is stored in the default "`terraform.tfstate`" file
-List the local Terraform state:
+## Terraform State
+- Terraform uses state data to remember which object corresponds to each resource in the configuration
+- The state is stored in the default "`terraform.tfstate`" file
+- List the local Terraform state:
 ```sh
 $ terraform state list
 ```
