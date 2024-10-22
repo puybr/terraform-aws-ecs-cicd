@@ -3,14 +3,17 @@ Install and configure AWS CLI
 Optional - Create an additional AWS CLI profile:
 nano ~/.aws/credentials
 
+```
 [profile-name]
 aws_access_key_id = XXXXXX
 aws_secret_access_key = XXXXXX
 nano ~/.aws/config
-
+```
+```
 [profile-name]
 region = eu-west-2
 output = json
+```
 Terraform Local Setup
 Install Chocolatey:
 Install JQ on Windows bash to run scripts in AWS
@@ -22,6 +25,7 @@ Make a new module:
 mkdir my_terraform_module
 cd my_terraform_module
 Add the AWS terraform providers "terraform.tf" file:
+```
 terraform {
   required_providers {
     aws = {
@@ -36,7 +40,9 @@ provider "aws" {
   region = var.aws_region
   profile = "profile-name"
 }
+```
 Add the "main.tf" file:
+```
 # Retrieve availability zones for the current region
 data "aws_availability_zones" "available" {}
  
@@ -47,7 +53,9 @@ data "aws_caller_identity" "current" {}
 locals {
     account_id = data.aws_caller_identity.current.account_id
 }
+```
 Add the "variable.tf" file:
+```
 variable "aws_region" {
   description = "Default AWS region"
   type = string
@@ -65,21 +73,26 @@ variable "ecs_cluster_name" {
     type = string
     default = "ecs-docker"
 }
+```
 Example - Create an ECS Cluster
 
 Add an "ecs.tf" file:
+```
 resource "aws_ecs_cluster" "example" {
     name = "${var.environment}-${var.ecs_cluster_name}"
 }
+```
 Check the Terraform Registry for more information about AWS resources!
 
 Module Structure
+```
 $ tree
 .
 |-- ecs.tf
 |-- main.tf
 |-- terraform.tf
 `-- variables.tf
+```
 Initialize and plan the module
 Initialize the Terrform module in the root module directory:
 terraform init
@@ -114,6 +127,7 @@ Terraform State
 Terraform uses state data to remember which object corresponds to each resource in the configuration
 The state is stored in the default "terraform.tfstate" file
 List the local Terraform state:
+```
 $ terraform state list
 aws_alb.main
 aws_alb_listener.http_front_end
@@ -122,9 +136,11 @@ aws_alb_target_group.blue["0"]
 aws_alb_target_group.green["0"]
 aws_lb_listener_rule.host_based_weighted_routing["0"]
 aws_security_group.lb
+```
 The remote Terraform state is stored in the S3 bucket backend
 The DynamoDB table supports state locking, consistency checking and can configure multiple remote state files
 Add the backend config to the "terraform.tf" providers file:
+```
 # terraform {
     backend "s3" {
     bucket             = "components-tfstate"
@@ -135,6 +151,7 @@ Add the backend config to the "terraform.tf" providers file:
     profile            = "profile-name"
     }
 # }
+```
 Migrate the Terraform state file from one backend to another:
 terraform init -migrate-state
 Terraform Workspaces
