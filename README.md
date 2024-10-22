@@ -1,9 +1,8 @@
 # 🚜 AWS Docker Infrastructure
 
-### Main branch structure:
+### AWS Modules:
 1. [Fargate](./fargate/README.md)
 2. [CodePipeline](./codepipeline/README.md)
-3. [NodeJS Express App](./fargate/docker/nodejs-express/README.md)
 
 ### AWS Resources:
 #### **[Fargate](./fargate/README.md)**:
