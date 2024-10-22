@@ -19,7 +19,7 @@ output = json
 - Install Chocolatey
 - Install Terraform:
 `choco install terraform`
-Verify the installation:
+- Verify the installation:
 `terraform -version`
 - Make a new module:
 `mkdir my_terraform_module`
