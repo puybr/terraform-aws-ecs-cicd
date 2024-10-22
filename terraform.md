@@ -107,7 +107,7 @@ $ tree
 ### Override default variables
 - _Option 1_: Add a "`terraform.tfvars`" file to override multiple default variables:
 ```tf
-environment="test"
+environment="dev"
 ```
 - _Option 2_: Override specific variables in the CLI:
 ```tf
@@ -137,7 +137,7 @@ prod.tfvars
 ```
 - Based on the environment, run apply using the variable file:
 ```sh
-$ terraform apply -var-file="test.tfvars"
+$ terraform apply -var-file="dev.tfvars"
 ```
 ## Terraform State
 - Terraform uses state data to remember which object corresponds to each resource in the configuration
