@@ -165,8 +165,8 @@ Add the backend config to the "terraform.tf" providers file:
 ```
 Migrate the Terraform state file from one backend to another:
 terraform init -migrate-state
-Terraform Workspaces
-Terraform starts with a single "`default`" workspace that cannot be deleted:
+# Terraform Workspaces
+- Terraform starts with a single "`default`" workspace that cannot be deleted:
 ```sh
 $ terraform workspace list
 * default
@@ -177,16 +177,18 @@ $ terraform workspace list
 ```sh
 terraform workspace new test
 ```
-Verify the setup:
+- Verify the setup:
+```sh
 terraform workspace show
-Run "`terraform plan`" to initialize the new workspace
-Terraform workspaces and state file
+```
+- Run "`terraform plan`" to initialize the new workspace
+- Terraform workspaces and state file
 Terraform creates a corresponding new state file in the same remote backend for the new workspace
-A new "`env:/`" directory is created along with the subdirectory of the workspace (test, trng, prod)
-The "`terraform.tfstate`" file is maintained at this location:
+- A new "`env:/`" directory is created along with the subdirectory of the workspace
+- The "`terraform.tfstate`" file is maintained at this location:
 ```sh
 env:/test/terraform.tfstate
-env:/trng/terraform.tfstate
+env:/stag/terraform.tfstate
 env:/prod/terraform.tfstate
 ```
 Delete a workspace
