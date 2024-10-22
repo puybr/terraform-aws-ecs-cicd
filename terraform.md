@@ -65,9 +65,9 @@ variable "aws_region" {
 }
  
 variable "environment" {
-  description = "Default environment: temp, test, stag, prod"
+  description = "Default environment: dev, stag, prod"
   type = string
-  default = "temp"
+  default = "test"
 }
  
 variable "ecs_cluster_name" {
@@ -104,17 +104,17 @@ Validate the configuration files:
 Plan the changes:
 `terraform plan`
 ### Override default variables
-- Option 1: Add a "`terraform.tfvars`" file to override multiple default variables:
+- _Option 1_: Add a "`terraform.tfvars`" file to override multiple default variables:
 ```tf
 environment="test"
 ```
-- Option 2: Override specific variables in the CLI:
+- _Option 2_: Override specific variables in the CLI:
 ```tf
-$ terraform plan -var environment="test"
+$ terraform plan -var environment="dev"
 ```
 ### Apply the module
 `terraform apply`
-`terraform apply -var environment="test"`
+`terraform apply -var environment="dev"`
 
 ### Destroy the module
 `terraform destroy`
@@ -128,9 +128,9 @@ $ terraform plan -var environment="test"
 instance_type = var.environment == "prod" ? "t2.macro" : "t2.nano"
 ```
 ### Managing variables with Terraform
-- For each environment, create a "tfvars" file:
+- For each environment, create a "`.tfvars`" file:
 ```sh
-test.tfvars
+dev.tfvars
 stag.tfvars
 prod.tfvars
 ```
@@ -172,7 +172,7 @@ $ terraform workspace list
 - Terraform does not access existing resources in other workspaces, allowing multiple states to be associated with a single configuration
 - Add a new workspace
 ```sh
-terraform workspace new test
+terraform workspace new dev
 ```
 - Verify the setup:
 ```sh
@@ -184,7 +184,7 @@ Terraform creates a corresponding new state file in the same remote backend for 
 - A new "`env:/`" directory is created along with the subdirectory of the workspace
 - The "`terraform.tfstate`" file is maintained at this location:
 ```sh
-env:/test/terraform.tfstate
+env:/dev/terraform.tfstate
 env:/stag/terraform.tfstate
 env:/prod/terraform.tfstate
 ```
@@ -193,6 +193,6 @@ Delete a workspace
 $ terraform workspace select default
 Switched to workspace "default".
  
-$ terraform workspace delete test
-Deleted workspace "test"!
+$ terraform workspace delete dev
+Deleted workspace "dev"!
 ```
