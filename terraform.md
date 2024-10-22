@@ -102,19 +102,20 @@ Validate the configuration files:
 `terraform validate`
 Plan the changes:
 `terraform plan`
-Override default variables
-Option 1: Add a "`terraform.tfvars`" file to override multiple default variables:
+### Override default variables
+- Option 1: Add a "`terraform.tfvars`" file to override multiple default variables:
 ```tf
 environment="test"
 ```
-Option 2: Override specific variables in the CLI:
+- Option 2: Override specific variables in the CLI:
 ```tf
 $ terraform plan -var environment="test"
 ```
-Apply the module
+### Apply the module
 `terraform apply`
 `terraform apply -var environment="test"`
-Destroy the module
+
+### Destroy the module
 `terraform destroy`
 
 ### Terraform Variables
