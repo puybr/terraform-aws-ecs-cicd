@@ -2,7 +2,9 @@
 
 ### AWS Modules:
 1. [Fargate](./fargate/README.md)
-2. [CodePipeline](./codepipeline/README.md)
+    - ECR
+    - ECS
+3. [CodePipeline](./codepipeline/README.md)
 
 ### AWS Resources:
 #### **[Fargate](./fargate/README.md)**:
