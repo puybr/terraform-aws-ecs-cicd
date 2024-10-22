@@ -1,6 +1,6 @@
 # 🚜 AWS Docker Infrastructure
 
-### AWS Modules:
+### Terraform Modules:
 1. [Fargate](./fargate/README.md)
     - ECR
     - ECS
