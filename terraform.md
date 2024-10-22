@@ -1,14 +1,14 @@
 # AWS CLI Setup
-Install and configure AWS CLI
-Optional - Create an additional AWS CLI profile:
-`nano ~/.aws/credentials`
+- Install and configure AWS CLI
+- Optional - Create an additional AWS CLI profile:
+- `nano ~/.aws/credentials`
 
 ```sh
 [profile-name]
 aws_access_key_id = XXXXXX
 aws_secret_access_key = XXXXX
 ```
-`nano ~/.aws/config`
+- `nano ~/.aws/config`
 
 ```
 [profile-name]
@@ -115,24 +115,30 @@ Apply the module
 Destroy the module
 `terraform destroy`
 
-###Terraform Variables
-Terraform will automatically load any files with "*.auto.tfvars" and "terraform.tfvars"
-The "variable.tf" file needs to have all the variables declared which can have a default value or not
-The ".tfvars" file is one way of associating variables to an environment
+### Terraform Variables
+- Terraform will automatically load any files with "`*.auto.tfvars`" and "`terraform.tfvars`"
+- The "`variable.tf`" file needs to have all the variables declared which can have a default value or not
+- The "`.tfvars`" file is one way of associating variables to an environment
 Conditionally assign values to different parameters based on the variables:
-logstash_host = var.environment == "prod" ? "172.31.75.197" : "172.31.69.116"
-Managing variables with Terraform
-For each environment, create a "tfvars" file:
+```tf
+instance_type = var.environment == "prod" ? "t2.macro" : "t2.nano"
+```
+### Managing variables with Terraform
+- For each environment, create a "tfvars" file:
+```sh
 test.tfvars
 trng.tfvars
 prod.tfvars
-Based on the environment, run apply using the variable file:
-$ terraform apply -var-file="test.tfvars"
-Terraform State
-Terraform uses state data to remember which object corresponds to each resource in the configuration
-The state is stored in the default "terraform.tfstate" file
-List the local Terraform state:
 ```
+- Based on the environment, run apply using the variable file:
+```sh
+$ terraform apply -var-file="test.tfvars"
+```
+### Terraform State
+Terraform uses state data to remember which object corresponds to each resource in the configuration
+The state is stored in the default "`terraform.tfstate`" file
+List the local Terraform state:
+```sh
 $ terraform state list
 aws_alb.main
 aws_alb_listener.http_front_end
@@ -145,7 +151,7 @@ aws_security_group.lb
 The remote Terraform state is stored in the S3 bucket backend
 The DynamoDB table supports state locking, consistency checking and can configure multiple remote state files
 Add the backend config to the "terraform.tf" providers file:
-```
+```tf
 # terraform {
     backend "s3" {
     bucket             = "components-tfstate"
@@ -160,32 +166,34 @@ Add the backend config to the "terraform.tf" providers file:
 Migrate the Terraform state file from one backend to another:
 terraform init -migrate-state
 Terraform Workspaces
-Terraform starts with a single "default" workspace that cannot be deleted:
+Terraform starts with a single "`default`" workspace that cannot be deleted:
+```sh
 $ terraform workspace list
 * default
-Workspaces manage multiple deployments of the same configuration such as different environments (test, trng, prod)
-Terraform does not access existing resources in other workspaces, allowing multiple states to be associated with a single configuration
-Add a new workspace
+```
+- Workspaces manage multiple deployments of the same configuration such as different environments
+- Terraform does not access existing resources in other workspaces, allowing multiple states to be associated with a single configuration
+- Add a new workspace
+```sh
 terraform workspace new test
+```
 Verify the setup:
 terraform workspace show
-Run "terraform plan" to initialize the new workspace
+Run "`terraform plan`" to initialize the new workspace
 Terraform workspaces and state file
 Terraform creates a corresponding new state file in the same remote backend for the new workspace
-A new "env:/" directory is created along with the subdirectory of the workspace (test, trng, prod)
-The "terraform.tfstate" file is maintained at this location:
+A new "`env:/`" directory is created along with the subdirectory of the workspace (test, trng, prod)
+The "`terraform.tfstate`" file is maintained at this location:
+```sh
 env:/test/terraform.tfstate
 env:/trng/terraform.tfstate
 env:/prod/terraform.tfstate
+```
 Delete a workspace
+```sh
 $ terraform workspace select default
 Switched to workspace "default".
  
 $ terraform workspace delete test
 Deleted workspace "test"!
-Terragrunt
-Helps manage configurations and serves as a thin wrapper on top of Terraform:
-Keeps configurations DRY (Don’t Repeat Yourself)
-Manages remote state
-Handles multiple environments (test, trng, prod)
-Executes custom code before or after running Terraform
+```
