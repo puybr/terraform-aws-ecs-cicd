@@ -65,7 +65,7 @@ variable "aws_region" {
 }
  
 variable "environment" {
-  description = "Default environment: temp, test, trng, prod"
+  description = "Default environment: temp, test, stag, prod"
   type = string
   default = "temp"
 }
