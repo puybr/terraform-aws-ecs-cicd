@@ -16,15 +16,15 @@ region = eu-west-2
 output = json
 ```
 ### Terraform Local Setup
-Install Chocolatey
-Install Terraform:
+- Install Chocolatey
+- Install Terraform:
 `choco install terraform`
 Verify the installation:
 `terraform -version`
-Make a new module:
+- Make a new module:
 `mkdir my_terraform_module`
 `cd my_terraform_module`
-Add the AWS terraform providers "`terraform.tf`" file:
+- Add the AWS terraform providers "`terraform.tf`" file:
 ```tf
 terraform {
   required_providers {
