@@ -2,8 +2,6 @@
 
 ### Terraform Modules:
 1. [Fargate](./fargate/README.md)
-    + ECR
-    + ECS
 3. [CodePipeline](./codepipeline/README.md)
 
 ### AWS Resources:
