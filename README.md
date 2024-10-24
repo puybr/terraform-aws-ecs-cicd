@@ -26,7 +26,7 @@
     - ECS Service
 - [x] **Elastic Container Registry** (ECR)
 
-#### **CI/CD - [CodePipeline](./codepipeline/README.md)**:
+#### **CD - [CodePipeline](./codepipeline/README.md)**:
 - [x] **CodePipeline**
 - [x] **CodeBuild**
 - [x] **CodeDeploy**
