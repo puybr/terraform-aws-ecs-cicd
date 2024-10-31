@@ -26,7 +26,7 @@ output = json
 - Make a new module:
 `mkdir my_terraform_module`
 `cd my_terraform_module`
-- Add the AWS terraform providers "`terraform.tf`" file:
+- Add the required AWS terraform providers "`terraform.tf`" file:
 ```tf
 terraform {
   required_providers {
@@ -36,15 +36,15 @@ terraform {
     }
   }
 }
- 
+```
+Add the "`main.tf`" file:
+```tf
 # Configure the AWS Provider
 provider "aws" {
   region = var.aws_region
   profile = "profile-name"
 }
-```
-Add the "`main.tf`" file:
-```tf
+
 # Retrieve availability zones for the current region
 data "aws_availability_zones" "available" {}
  
