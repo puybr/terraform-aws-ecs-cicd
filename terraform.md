@@ -120,7 +120,7 @@ $ terraform plan -var environment="dev"
 ### Destroy the module
 `terraform destroy`
 
-### Terraform Variables
+## Terraform Variables
 - Terraform will automatically load any files with "`*.auto.tfvars`" and "`terraform.tfvars`"
 - The "`variable.tf`" file needs to have all the variables declared which can have a default value or not
 - The "`.tfvars`" file is one way of associating variables to an environment
