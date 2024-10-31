@@ -1,6 +1,6 @@
 # AWS Terraform
 
-## AWS CLI Setup
+### AWS CLI Setup
 - Install and configure AWS CLI
 - Optional - Create an additional AWS CLI profile:
 - `nano ~/.aws/credentials`
@@ -163,7 +163,7 @@ $ terraform state list
 ```
 - Migrate the Terraform state file from one backend to another:
 `terraform init -migrate-state`
-# Terraform Workspaces
+## Terraform Workspaces
 - Terraform starts with a single "`default`" workspace that cannot be deleted:
 ```sh
 $ terraform workspace list
