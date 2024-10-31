@@ -59,15 +59,15 @@ locals {
 Add the "`variable.tf`" file:
 ```tf
 variable "aws_region" {
-  description = "Default AWS region"
-  type = string
-  default = "eu-west-2"
+    description = "Default AWS region"
+    type = string
+    default = "eu-west-2"
 }
  
 variable "environment" {
-  description = "Default environment: dev, stag, prod"
-  type = string
-  default = "test"
+    description = "Default environment: dev, stag, prod"
+    type = string
+    default = "test"
 }
  
 variable "ecs_cluster_name" {
