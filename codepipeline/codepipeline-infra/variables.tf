@@ -1,4 +1,3 @@
-
 variable "aws_region" {
   default = "eu-west-2"
 }
@@ -117,10 +116,10 @@ variable "ecs_task_execution_role" {
 
 variable "codestarconnection_arn" {
   type = string
-  default = "arn:aws:codestar-connections:eu-west-2:688567286177:connection/f9be2ec6-986b-48df-bc55-151c1f0747cd"
+  default = ""
 }
 
 variable "lb_listener_arn" {
     type = string
-    default = "arn:aws:elasticloadbalancing:eu-west-2:688567286177:listener/app/test-lb/a9f6a92b7d195a42/6a2894b30eb1da48" 
+    default = "" 
 }
