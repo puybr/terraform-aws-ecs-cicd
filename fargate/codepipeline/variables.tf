@@ -4,7 +4,7 @@ variable "aws_region" {
 
 variable "app_name" {
     description = "Name of the app"
-    default = "test-app"
+    default = "nodejs-express"
 }
 
 variable "app_port" {
@@ -21,15 +21,15 @@ variable "image_tag" {
 }
 
 variable "ecs_cluster_name" {
-  default = "test-cluster"
+  default = "ecs-docker"
 }
 
 variable "ecs_service_name" {
-  default = "test-service"
+  default = "nodejs-express-service"
 }
 
 variable "ecs_task_definition" {
-  default = "test-app-task-family"
+  default = "nodejs-express-task-family"
 }
 
 variable "codestarconnection_provider_type" {
@@ -42,11 +42,11 @@ variable "repo_name" {
 }
 
 variable "repo_owner" {
-  default = "ghost-goblin"
+  default = "puybr"
 }
 
 variable "repo_branch" {
-  default = "main"
+  default = "temp"
 }
 
 variable "s3_bucket_name" {
