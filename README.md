@@ -3,7 +3,7 @@
 ### Terraform Modules:
 1. ECR-infra
 2. ECS-infra
-3. CodePipeline-infra
+3. CodePipeline
 
 ### AWS Resources:
 - [x] **Virtual Private Cloud** (VPC)
