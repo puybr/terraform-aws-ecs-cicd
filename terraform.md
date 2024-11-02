@@ -18,7 +18,7 @@ region = eu-west-2
 output = json
 ```
 ### Terraform Local Setup
-- Install Chocolatey
+- Install [Chocolatey](https://chocolatey.org/install)
 - Install Terraform:
 `choco install terraform`
 - Verify the installation:
