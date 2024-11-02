@@ -7,7 +7,7 @@
 
 ### How to run:
 ```sh
-cd /fargate/<MODULE>/
+cd fargate/<MODULE>/
 terraform init
 terraform plan
 terraform apply
