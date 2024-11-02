@@ -30,7 +30,7 @@ terraform apply
     - ECS Task Definition
     - ECS Service
 - [x] **Elastic Container Registry** (ECR)
-- [x] **Codestar Connection**
+- [x] **[Codestar Connection](https://docs.aws.amazon.com/codepipeline/latest/userguide/connections-github.html)**
 - [x] **CodePipeline**
 - [x] **CodeBuild**
 - [x] **CodeDeploy**
