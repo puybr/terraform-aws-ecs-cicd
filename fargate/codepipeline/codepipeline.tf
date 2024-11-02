@@ -21,7 +21,7 @@ resource "aws_codepipeline" "codepipeline" {
             configuration = {
                 ConnectionArn    = "${var.codestarconnection_arn}"
                 FullRepositoryId = "${var.repo_owner}/${var.repo_name}"
-                BranchName       = var.repo_branch
+                BranchName       = var.app_name
                 DetectChanges    = true
                 }
         }
@@ -59,7 +59,7 @@ resource "aws_codepipeline" "codepipeline" {
             run_order        = 1
             configuration = {
                 ApplicationName                = aws_codedeploy_app.frontend.name
-                DeploymentGroupName            = var.deployment_group_name
+                DeploymentGroupName            = var.app_name
                 TaskDefinitionTemplateArtifact = "BuildArtifact"
                 TaskDefinitionTemplatePath     = "taskdef.json"
                 AppSpecTemplateArtifact        = "BuildArtifact"
