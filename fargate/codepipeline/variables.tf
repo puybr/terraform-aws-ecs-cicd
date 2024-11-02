@@ -111,7 +111,7 @@ variable "lb_target_group_blue" {
 
 variable "ecs_task_execution_role" {
     type = string
-    default = "test-ecs-task-execution-role" 
+    default = "ecsTaskExecutionRole"
 }
 
 variable "codestarconnection_arn" {
