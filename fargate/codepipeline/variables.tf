@@ -12,17 +12,8 @@ variable "app_port" {
     default = 3000
 }
 
-variable "image_tag" {
-  default = "latest"
-}
-
 variable "ecs_cluster_name" {
   default = "ecs-docker"
-}
-
-variable "codestarconnection_provider_type" {
-  type = string
-  default = "GitHub"
 }
 
 variable "repo_name" {
