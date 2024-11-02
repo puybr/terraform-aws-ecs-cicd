@@ -1,9 +1,17 @@
 # 🚜 AWS Docker Infrastructure
 
 ### Terraform Modules:
-1. ECR-infra
-2. ECS-infra
-3. CodePipeline
+1. ecr-infra
+2. ecs-infra
+3. codepipeline
+
+### How to run:
+```sh
+cd /fargate/<MODULE>/
+terraform init
+terraform plan
+terraform apply
+```
 
 ### AWS Resources:
 - [x] **Virtual Private Cloud** (VPC)
