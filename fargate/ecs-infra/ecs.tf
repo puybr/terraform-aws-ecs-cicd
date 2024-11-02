@@ -29,7 +29,7 @@ resource "aws_ecs_task_definition" "app" {
 
 # Create Fargate service inside the cluster
 resource "aws_ecs_service" "main" {
-  name                = var.ecs_service_name
+  name                = var.app_name
   cluster             = aws_ecs_cluster.main.id
   task_definition     = aws_ecs_task_definition.app.arn
   scheduling_strategy = "REPLICA"
