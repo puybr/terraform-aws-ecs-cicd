@@ -15,7 +15,7 @@ resource "aws_codedeploy_deployment_group" "frontend" {
     }
 
     terminate_blue_instances_on_deployment_success {
-      action                           = "TERMINATE"
+      action            = "TERMINATE"
     }
   }
 
