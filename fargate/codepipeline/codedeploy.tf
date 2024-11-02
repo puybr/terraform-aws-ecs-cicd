@@ -1,6 +1,6 @@
 resource "aws_codedeploy_app" "frontend" {
   compute_platform = "ECS"
-  name             = var.codedeploy_app_name
+  name             = var.app_name
 }
 
 resource "aws_codedeploy_deployment_group" "frontend" {
@@ -21,7 +21,7 @@ resource "aws_codedeploy_deployment_group" "frontend" {
 
   ecs_service {
     cluster_name = var.ecs_cluster_name
-    service_name = var.ecs_service_name
+    service_name = var.app_name
   }
 
   deployment_style {
@@ -40,11 +40,11 @@ resource "aws_codedeploy_deployment_group" "frontend" {
       }
 
       target_group {
-        name = "${var.lb_target_group_blue}"
+        name = "${var.app_name}-blue-${var.app_port}"
       }
 
       target_group {
-        name = "${var.lb_target_group_green}"
+        name = "${var.app_name}-green-${var.app_port}"
       }
     }
   }
