@@ -1,11 +1,11 @@
 # 🚜 AWS Docker Infrastructure
 
 ### Terraform Modules:
-1. [Fargate](./fargate/README.md)
-3. [CodePipeline](./codepipeline/README.md)
+1. ECR-infra
+2. ECS-infra
+3. CodePipeline-infra
 
 ### AWS Resources:
-#### **[Fargate](./fargate/README.md)**:
 - [x] **Virtual Private Cloud** (VPC)
     - Subnets
     - Internet Gateway
@@ -23,17 +23,8 @@
     - ECS Task Definition
     - ECS Service
 - [x] **Elastic Container Registry** (ECR)
-
-#### **CD - [CodePipeline](./codepipeline/README.md)**:
+- [x] **Codestar Connection**
 - [x] **CodePipeline**
 - [x] **CodeBuild**
 - [x] **CodeDeploy**
-    - Blue/Green Deployment
-- [x] **Codestar Connection**
-- [X] **IAM Policies & Roles**
 - [X] **S3 Bucket Artifacts**
-
-#### **[NodeJS Express](./fargate/docker/nodejs-express/README.md) Boilerplate**:
-- [x] `Dockerfile`
-- [x] `buildspec.yml`
-- [x] `appspec_template.yaml`

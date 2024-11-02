@@ -51,7 +51,7 @@ resource "aws_codepipeline" "codepipeline" {
             name            = "Deploy"
             category        = "Deploy"
             owner           = "AWS"
-            provider        = "CodeDeploy"
+            provider        = "CodeDeployToECS"
             version         = "1"
             input_artifacts  = ["BuildArtifact"]
             output_artifacts = []
@@ -60,6 +60,12 @@ resource "aws_codepipeline" "codepipeline" {
             configuration = {
                 ApplicationName                = aws_codedeploy_app.frontend.name
                 DeploymentGroupName            = var.deployment_group_name
+                TaskDefinitionTemplateArtifact = "BuildArtifact"
+                TaskDefinitionTemplatePath     = "taskdef.json"
+                AppSpecTemplateArtifact        = "BuildArtifact"
+                AppSpecTemplatePath            = "appspec.yml"
+                Image1ArtifactName             = "BuildArtifact"
+                Image1ContainerName            = "IMAGE1_NAME"
             }
         }
     }

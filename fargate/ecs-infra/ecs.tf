@@ -4,7 +4,7 @@ resource "aws_ecs_cluster" "main" {
 }
 
 data "template_file" "app" {
-    template = file("${var.template_file_path}")
+    template = file("./templates/taskdef.json.tpl")
     vars = {
         app_name       = var.app_name
         app_port       = var.app_port
@@ -12,7 +12,6 @@ data "template_file" "app" {
         fargate_cpu    = var.fargate_cpu
         fargate_memory = var.fargate_memory
         app_image      = "${local.account_id}.dkr.ecr.${var.aws_region}.amazonaws.com/${var.image_repo_name}:${var.image_tag}"
-        secret_var     = "arn:aws:ssm:${var.aws_region}:${local.account_id}:parameter/${var.app_name}"
     }
     depends_on = [aws_ssm_parameter.app]
 }
@@ -30,11 +29,12 @@ resource "aws_ecs_task_definition" "app" {
 
 # Create Fargate service inside the cluster
 resource "aws_ecs_service" "main" {
-  name            = var.ecs_service_name
-  cluster         = aws_ecs_cluster.main.id
-  task_definition = aws_ecs_task_definition.app.arn
-  desired_count   = var.app_count
-  launch_type     = "FARGATE"
+  name                = var.ecs_service_name
+  cluster             = aws_ecs_cluster.main.id
+  task_definition     = aws_ecs_task_definition.app.arn
+  scheduling_strategy = "REPLICA"
+  desired_count       = var.app_count
+  launch_type         = "FARGATE"
 
   network_configuration {
       security_groups  = [aws_security_group.ecs_tasks.id]
@@ -51,5 +51,10 @@ resource "aws_ecs_service" "main" {
   deployment_controller {
     type = "CODE_DEPLOY"
   }
+
+  lifecycle {
+    ignore_changes = [task_definition, desired_count, load_balancer]
+  }
+
   depends_on = [aws_alb_listener.front_end, aws_iam_role_policy_attachment.ecs_task_execution_role_policy_attachment]
 }

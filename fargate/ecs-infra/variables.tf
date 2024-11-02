@@ -74,7 +74,3 @@ variable "ecs_service_name" {
 variable "ecs_cluster_name" {
     default = "test-cluster"
 }
-
-variable "template_file_path" {
-    default = "./templates/task-definition.json.tpl"
-}
