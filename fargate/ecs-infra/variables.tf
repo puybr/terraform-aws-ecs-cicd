@@ -2,10 +2,6 @@ variable "aws_region" {
   default = "eu-west-2"
 }
 
-variable "image_repo_name" {
-  default = "nodejs-express"
-}
-
 variable "image_tag" {
   default = "latest"
 }
