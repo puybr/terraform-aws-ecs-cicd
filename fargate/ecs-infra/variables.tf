@@ -17,7 +17,7 @@ variable "image_tag" {
 
 variable "app_name" {
     description = "Name of the app"
-    default = "test-app"
+    default = "nodejs-express"
 }
 
 variable "app_port" {
@@ -60,15 +60,15 @@ variable "ecs_task_execution_policy_name" {
 }
 
 variable "load_balancer_security_group_name" {
-    default = "test-load-balancer-security-group"
+    default = "lb-sg"
 }
 
 variable "ecs_task_security_group_name" {
-    default = "test-ecs-task-security-group"
+    default = "ecs-sg"
 }
 
 variable "ecs_service_name" {
-    default = "test-service"
+    default = "nodejs-express-service"
 }
 
 variable "ecs_cluster_name" {
