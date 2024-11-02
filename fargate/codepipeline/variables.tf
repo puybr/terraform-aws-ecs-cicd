@@ -39,32 +39,32 @@ variable "repo_branch" {
 
 variable "s3_bucket_name" {
     type = string
-    default = "test-app-s3-terraform-bucket-01"
+    default = "terraform-bucket-0830820476"
 }
 
 variable "codebuild_role" {
     type = string
-    default = "test-app-codebuild-role" 
+    default = "codeBuildRole" 
 }
 
 variable "codebuild_policy" {
     type = string
-    default = "test-app-codebuild-policy" 
+    default = "codeBuildPolicy" 
 }
 
 variable "codepipeline_role" {
     type = string
-    default = "test-app-codepipeline-role" 
+    default = "codePipelineRole" 
 }
 
 variable "codepipeline_policy" {
     type = string
-    default = "test-app-codepipeline-policy" 
+    default = "codePipelinePolicy" 
 }
 
 variable "codedeploy_role" {
     type = string
-    default = "test-codedeploy-role" 
+    default = "codeDeployRole" 
 }
 
 variable "ecs_task_execution_role" {
