@@ -2,11 +2,6 @@ variable "aws_region" {
   default = "eu-west-2"
 }
 
-variable "az_count" {
-    description = "Number of AZs to cover in a given region"
-    default = "1"
-}
-
 variable "image_repo_name" {
   default = "nodejs-express"
 }
