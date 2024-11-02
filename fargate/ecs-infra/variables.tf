@@ -58,10 +58,6 @@ variable "ecs_task_security_group_name" {
     default = "ecs-sg"
 }
 
-variable "ecs_service_name" {
-    default = "nodejs-express-service"
-}
-
 variable "ecs_cluster_name" {
     default = "ecs-docker"
 }
