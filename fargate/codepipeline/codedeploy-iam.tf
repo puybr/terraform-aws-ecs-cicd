@@ -55,7 +55,7 @@ data "aws_iam_policy_document" "codedeploy_policy" {
     sid    = "DeployService"
     effect = "Allow"
 
-    actions = ["ecs:DescribeServices",
+    actions = [
       "codedeploy:GetDeploymentGroup",
       "codedeploy:CreateDeployment",
       "codedeploy:GetDeployment",
