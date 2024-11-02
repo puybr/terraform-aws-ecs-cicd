@@ -4,7 +4,7 @@ variable "aws_region" {
 
 variable "az_count" {
     description = "Number of AZs to cover in a given region"
-    default = "2"
+    default = "1"
 }
 
 variable "image_repo_name" {
@@ -27,7 +27,7 @@ variable "app_port" {
 
 variable "app_count" {
     description = "Number of docker containers to run"
-    default = 2
+    default = 1
 }
 
 variable "health_check_path" {
@@ -51,12 +51,12 @@ variable "load_balancer_name" {
 
 variable "ecs_task_execution_role_name" {
     description = "ECS task execution role name"
-    default = "test-ecs-task-execution-role"
+    default = "ecsTaskExecutionRole"
 }
 
 variable "ecs_task_execution_policy_name" {
     description = "ECS task execution policy name"
-    default = "test-ecs-task-execution-policy"
+    default = "ecsTaskExecutionPolicy"
 }
 
 variable "load_balancer_security_group_name" {
@@ -72,5 +72,5 @@ variable "ecs_service_name" {
 }
 
 variable "ecs_cluster_name" {
-    default = "test-cluster"
+    default = "ecs-docker"
 }
