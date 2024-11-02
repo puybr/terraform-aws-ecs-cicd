@@ -11,7 +11,7 @@ data "template_file" "app" {
         region         = var.aws_region
         fargate_cpu    = var.fargate_cpu
         fargate_memory = var.fargate_memory
-        app_image      = "${local.account_id}.dkr.ecr.${var.aws_region}.amazonaws.com/${var.image_repo_name}:${var.image_tag}"
+        app_image      = "${local.account_id}.dkr.ecr.${var.aws_region}.amazonaws.com/${var.app_name}:${var.image_tag}"
     }
     depends_on = [aws_ssm_parameter.app]
 }
