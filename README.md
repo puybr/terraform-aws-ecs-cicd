@@ -16,7 +16,6 @@
     - ALB Listener
     - ALB Health Checks
 - [x] **IAM Policies & Roles**
-- [x] **Environment Variables & Secrets**
 - [x] **Security Groups**
 - [x] **Elastic Container Service** (ECS)
     - ECS Cluster
