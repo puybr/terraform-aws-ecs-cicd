@@ -12,24 +12,12 @@ variable "app_port" {
     default = 3000
 }
 
-variable "image_repo_name" {
-  default = "nodejs-express"
-}
-
 variable "image_tag" {
   default = "latest"
 }
 
 variable "ecs_cluster_name" {
   default = "ecs-docker"
-}
-
-variable "ecs_service_name" {
-  default = "nodejs-express-service"
-}
-
-variable "ecs_task_definition" {
-  default = "nodejs-express-task-family"
 }
 
 variable "codestarconnection_provider_type" {
@@ -54,16 +42,6 @@ variable "s3_bucket_name" {
     default = "test-app-s3-terraform-bucket-01"
 }
 
-variable "codebuild_project_name" {
-    type = string
-    default = "test-codebuild-project" 
-}
-
-variable "codepipeline_name" {
-    type = string
-    default = "test-codepipeline" 
-}
-
 variable "codebuild_role" {
     type = string
     default = "test-app-codebuild-role" 
@@ -84,29 +62,9 @@ variable "codepipeline_policy" {
     default = "test-app-codepipeline-policy" 
 }
 
-variable "deployment_group_name" {
-    type = string
-    default = "test-deploy-group" 
-}
-
-variable "codedeploy_app_name" {
-    type = string
-    default = "test-codedeploy-app" 
-}
-
 variable "codedeploy_role" {
     type = string
     default = "test-codedeploy-role" 
-}
-
-variable "lb_target_group_green" {
-    type = string
-    default = "test-lb-green-3000" 
-}
-
-variable "lb_target_group_blue" {
-    type = string
-    default = "test-lb-blue-3000" 
 }
 
 variable "ecs_task_execution_role" {
