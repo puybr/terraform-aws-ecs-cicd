@@ -85,7 +85,7 @@ resource "aws_ecs_cluster" "example" {
 }
 ```
 
-> Check the Terraform Registry for more information about AWS resources!
+> Check the [Terraform Registry](https://registry.terraform.io/providers/hashicorp/aws/latest) for more information about AWS resources!
 
 Module Structure:
 ```sh
