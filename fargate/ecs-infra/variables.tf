@@ -2,10 +2,6 @@ variable "aws_region" {
   default = "eu-west-2"
 }
 
-variable "image_tag" {
-  default = "latest"
-}
-
 variable "app_name" {
     description = "Name of the app"
     default = "nodejs-express"
@@ -19,6 +15,10 @@ variable "app_port" {
 variable "app_count" {
     description = "Number of docker containers to run"
     default = 1
+}
+
+variable "image_tag" {
+  default = "latest"
 }
 
 variable "health_check_path" {
@@ -37,7 +37,7 @@ variable "fargate_memory" {
 
 variable "load_balancer_name" {
     description = "Name of LB"
-    default = "test-lb"
+    default = "lb-ecs"
 }
 
 variable "ecs_task_execution_role_name" {
@@ -47,7 +47,7 @@ variable "ecs_task_execution_role_name" {
 
 variable "ecs_task_execution_policy_name" {
     description = "ECS task execution policy name"
-    default = "ecsTaskExecutionPolicy"
+    default = "ecsTaskExecutionPermissions"
 }
 
 variable "load_balancer_security_group_name" {
