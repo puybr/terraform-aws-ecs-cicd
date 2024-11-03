@@ -7,6 +7,7 @@
 
 ### How to setup:
 - Configure your AWS CLI profile access keys in the "`main.tf`" file located in each module
+- See the how-to guide [here](./fargate/README.md)
 - `aws configure [--profile profile-name]`
 
 ### How to run:
