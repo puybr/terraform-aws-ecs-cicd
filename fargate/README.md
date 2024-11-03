@@ -2,7 +2,7 @@
 
 ### AWS CLI Setup
 - Install and configure AWS CLI
-- Optional - Create an additional AWS CLI profile:
+- _Optional_ - Create an additional AWS CLI profile:
 - `nano ~/.aws/credentials`
 
 ```sh
