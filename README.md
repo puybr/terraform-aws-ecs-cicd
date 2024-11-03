@@ -1,9 +1,9 @@
 # 🚜 AWS Docker Infrastructure
 
 ### Terraform Modules:
-1. ecr-infra
-2. ecs-infra
-3. codepipeline
+1. [ecr-infra](./fargate/ecr-infra)
+2. [ecs-infra](./fargate/ecs-infra)
+3. [codepipeline](./fargate/codepipeline)
 
 ### How to setup:
 - Configure the AWS providers profile in the "`main.tf`" file located in each module
