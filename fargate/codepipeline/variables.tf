@@ -40,7 +40,7 @@ variable "codebuild_role" {
 
 variable "codebuild_policy" {
     type = string
-    default = "codeBuildPolicy" 
+    default = "codeBuildPermissions" 
 }
 
 variable "codepipeline_role" {
@@ -50,7 +50,7 @@ variable "codepipeline_role" {
 
 variable "codepipeline_policy" {
     type = string
-    default = "codePipelinePolicy" 
+    default = "codePipelinePermissions" 
 }
 
 variable "codedeploy_role" {
