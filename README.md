@@ -5,6 +5,9 @@
 2. ecs-infra
 3. codepipeline
 
+### How to setup:
+- Configure your AWS CLI access keys in the "`main.tf`" file located in each module
+
 ### How to run:
 ```sh
 cd fargate/<MODULE>/
