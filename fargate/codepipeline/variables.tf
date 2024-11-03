@@ -30,7 +30,7 @@ variable "repo_branch" {
 
 variable "s3_bucket_name" {
     type = string
-    default = "terraform-bucket-0830820476"
+    default = "bucket-9f62d271"
 }
 
 variable "codebuild_role" {
