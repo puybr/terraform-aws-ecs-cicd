@@ -6,7 +6,8 @@
 3. codepipeline
 
 ### How to setup:
-- Configure your AWS CLI access keys in the "`main.tf`" file located in each module
+- Configure your AWS CLI profile access keys in the "`main.tf`" file located in each module
+- `aws configure [--profile profile-name]`
 
 ### How to run:
 ```sh
