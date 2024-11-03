@@ -17,7 +17,7 @@ variable "ecs_cluster_name" {
 }
 
 variable "repo_name" {
-  default = "nodejs-express-server"
+  default = "nodejs-express-boilerplate"
 }
 
 variable "repo_owner" {
