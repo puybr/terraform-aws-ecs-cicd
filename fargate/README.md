@@ -76,7 +76,7 @@ variable "ecs_cluster_name" {
     default = "ecs-docker"
 }
 ```
-Example - Create an ECS Cluster
+_Example_ - Create an ECS Cluster
 
 Add an "`ecs.tf`" file:
 ```tf
