@@ -7,8 +7,8 @@
 
 ```sh
 [profile-name]
-aws_access_key_id = XXXXX
-aws_secret_access_key = XXXXX
+aws_access_key_id = *****
+aws_secret_access_key = *****
 ```
 - `nano ~/.aws/config`
 
