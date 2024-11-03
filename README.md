@@ -9,6 +9,7 @@
 - Configure the AWS providers profile in the "`main.tf`" file located in each module
 - See the how-to guide [here](./fargate/README.md)
 - `aws configure [--profile profile-name]`
+- Add the [Codestar Connection](https://docs.aws.amazon.com/codepipeline/latest/userguide/connections-github.html)
 
 ### How to run:
 ```sh
@@ -28,14 +29,13 @@ terraform apply
     - ALB Target Group
     - ALB Listener
     - ALB Health Checks
-- [x] **IAM Policies & Roles**
+- [x] **IAM Roles & Policies**
 - [x] **Security Groups**
+- [x] **Elastic Container Registry** (ECR)
 - [x] **Elastic Container Service** (ECS)
     - ECS Cluster
     - ECS Task Definition
     - ECS Service
-- [x] **Elastic Container Registry** (ECR)
-- [x] **[Codestar Connection](https://docs.aws.amazon.com/codepipeline/latest/userguide/connections-github.html)**
 - [x] **CodePipeline**
 - [x] **CodeBuild**
 - [x] **CodeDeploy**
