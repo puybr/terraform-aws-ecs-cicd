@@ -3,5 +3,5 @@ output "lb_hostname" {
 }
 
 output "lb_listener_arn" {
-  value = aws_alb_listener.front_end
+  value = aws_alb_listener.front_end.arn
 }
