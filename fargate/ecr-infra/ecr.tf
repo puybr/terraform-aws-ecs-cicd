@@ -5,7 +5,7 @@ resource "aws_ecr_repository" "ecr_repository" {
 
 data "aws_iam_policy_document" "example" {
   statement {
-    sid    = "${var.repo_name}_Permissions"
+    sid    = "${var.repo_name}_permissions"
     effect = "Allow"
 
     principals {
