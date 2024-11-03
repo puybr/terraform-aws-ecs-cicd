@@ -171,7 +171,7 @@ $ terraform workspace list
 ```
 - Workspaces manage multiple deployments of the same configuration such as different environments
 - Terraform does not access existing resources in other workspaces, allowing multiple states to be associated with a single configuration
-- Add a new workspace
+- Add a new workspace:
 ```sh
 terraform workspace new dev
 ```
