@@ -31,6 +31,7 @@ terraform apply
     - ALB Health Checks
 - [x] **IAM Roles & Policies**
 - [x] **Security Groups**
+- [x] **Systems Manager Parameter Store** (SSM)
 - [x] **Elastic Container Registry** (ECR)
 - [x] **Elastic Container Service** (ECS)
     - ECS Cluster
