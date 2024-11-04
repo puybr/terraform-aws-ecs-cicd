@@ -146,7 +146,7 @@ $ terraform apply -var-file="dev.tfvars"
 ```sh
 $ terraform state list
 ```
-- The remote Terraform state is stored in the S3 bucket backend
+- The remote Terraform state is stored in the [S3 bucket backend](https://developer.hashicorp.com/terraform/language/backend/s3)
 - The DynamoDB table supports state locking, consistency checking and can configure multiple remote state files
 - Add the backend config to the "`terraform.tf`" providers file:
 ```tf
@@ -197,3 +197,8 @@ Switched to workspace "default".
 $ terraform workspace delete dev
 Deleted workspace "dev"!
 ```
+### Manage multiple environments
+1. Terraform workspaces
+2. [Terragrunt](https://terragrunt.gruntwork.io/) (thin wrapper on top of Terraform)
+3. [Separate modules in a directory structure](https://developer.hashicorp.com/terraform/tutorials/modules/organize-configuration) (one branch)
+4. Git branch per environment
