@@ -35,12 +35,13 @@ resource "aws_iam_role_policy" "codebuild_policy" {
     },
     {
       "Action": [
-        "s3:*"
+        "s3:GetObject",
+        "s3:GetObjectVersion",
+        "s3:GetBucketVersioning",
+        "s3:PutObjectAcl",
+        "s3:PutObject"
       ],
-      "Resource": [
-        "arn:aws:s3:::${aws_s3_bucket.codepipeline_bucket.bucket}",
-        "arn:aws:s3:::${aws_s3_bucket.codepipeline_bucket.bucket}/*"
-      ],
+      "Resource": ["*"],
       "Effect": "Allow"
     },
     {
@@ -59,8 +60,6 @@ resource "aws_iam_role_policy" "codebuild_policy" {
     },
     {
       "Action": [
-        "ecs:UpdateService",
-        "ecs:DescribeTaskDefinition",
         "iam:GetRole",
         "iam:PassRole"
       ],
@@ -68,6 +67,32 @@ resource "aws_iam_role_policy" "codebuild_policy" {
         "*"
       ],
         "Effect": "Allow"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [ 
+          "codeartifact:GetAuthorizationToken",
+          "codeartifact:GetRepositoryEndpoint",
+          "codeartifact:ReadFromRepository",
+          "codeartifact:PublishPackageVersion",
+          "codeartifact:PutPackageMetadata"
+          ],
+      "Resource": "*"
+    },
+    {       
+      "Effect": "Allow",
+      "Action": "sts:GetServiceBearerToken",
+      "Resource": "*",
+      "Condition": {
+          "StringEquals": { "sts:AWSServiceName": "codeartifact.amazonaws.com" }
+      }
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+          "secretsmanager:DescribeSecret"
+      ],
+      "Resource": "*"
     }
   ]
 }
