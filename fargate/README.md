@@ -199,6 +199,6 @@ Deleted workspace "dev"!
 ```
 ### Manage multiple environments
 1. Terraform workspaces
-2. [Terragrunt](https://terragrunt.gruntwork.io/) (thin wrapper on top of Terraform)
-3. [Separate modules in a directory structure](https://developer.hashicorp.com/terraform/tutorials/modules/organize-configuration) (one branch)
+2. [Terragrunt](https://terragrunt.gruntwork.io/) (_thin wrapper on top of Terraform_)
+3. [Separate modules in a directory structure](https://developer.hashicorp.com/terraform/tutorials/modules/organize-configuration) (_one branch_)
 4. Git branch per environment
