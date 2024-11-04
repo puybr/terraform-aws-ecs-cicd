@@ -28,11 +28,6 @@ variable "repo_branch" {
   default = "temp"
 }
 
-variable "s3_bucket_name" {
-    type = string
-    default = "bucket-9f62d271"
-}
-
 variable "codebuild_role" {
     type = string
     default = "codeBuildRole" 
