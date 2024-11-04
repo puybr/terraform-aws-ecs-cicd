@@ -27,15 +27,11 @@ data "aws_iam_policy_document" "codedeploy_policy" {
       "ecs:DeleteTaskSet",
       "ecs:DescribeServices",
       "ecs:UpdateServicePrimaryTaskSet",
-      "ecs:RegisterTaskDefinition",
-      "ecs:ListTaskDefinitions",
-      "ecs:DescribeTaskDefinition",
       "elasticloadbalancing:DescribeListeners",
       "elasticloadbalancing:DescribeRules",
       "elasticloadbalancing:DescribeTargetGroups",
       "elasticloadbalancing:ModifyListener",
       "elasticloadbalancing:ModifyRule",
-      "s3:GetObject"
     ]
 
     resources = ["*"]
@@ -47,10 +43,17 @@ data "aws_iam_policy_document" "codedeploy_policy" {
     actions = ["iam:PassRole"]
 
     resources = [
-      "arn:aws:iam::${local.account_id}:role/${var.ecs_task_execution_role}",
+      "arn:aws:iam::${local.account_id}:role/${var.environment}-${var.ecs_task_execution_role}",
     ]
   }
+  statement {
+    sid    = "s3Service"
+    effect = "Allow"
 
+    actions = ["s3:GetObject"]
+
+    resources = ["*"]
+  }
   statement {
     sid    = "DeployService"
     effect = "Allow"
@@ -64,9 +67,8 @@ data "aws_iam_policy_document" "codedeploy_policy" {
 
     resources = ["*"]
   }
-
-
 }
+
 resource "aws_iam_role_policy" "codedeploy_policy" {
   role   = aws_iam_role.codedeploy_role.name
   policy = data.aws_iam_policy_document.codedeploy_policy.json
