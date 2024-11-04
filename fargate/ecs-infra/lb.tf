@@ -8,7 +8,7 @@ resource "aws_alb" "main" {
 # Create the Target Groups
 resource "aws_alb_target_group" "app" {
     count       = "${length(local.target_groups)}"
-    name        = "${var.app_name}-${element(local.target_groups, count.index)}-${var.app_port}"
+    name        = "${var.app_name}-${var.app_port}-${element(local.target_groups, count.index)}"
     port        = 80
     protocol    = "HTTP"
     vpc_id      = aws_vpc.main.id
