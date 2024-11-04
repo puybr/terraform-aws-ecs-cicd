@@ -43,7 +43,7 @@ data "aws_iam_policy_document" "codedeploy_policy" {
     actions = ["iam:PassRole"]
 
     resources = [
-      "arn:aws:iam::${local.account_id}:role/${var.environment}-${var.ecs_task_execution_role}",
+      "arn:aws:iam::${local.account_id}:role/${var.ecs_task_execution_role}",
     ]
   }
   statement {
