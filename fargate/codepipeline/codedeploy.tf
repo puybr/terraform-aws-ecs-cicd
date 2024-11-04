@@ -44,7 +44,7 @@ resource "aws_codedeploy_deployment_group" "frontend" {
       }
 
       target_group {
-        name = "${var.app_name}-green-${var.app_port}-green"
+        name = "${var.app_name}-${var.app_port}-green"
       }
     }
   }
