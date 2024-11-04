@@ -27,8 +27,8 @@ terraform apply
     - Route Tables
     - NAT Gateway
 - [x] **Application Load Balancer** (ALB)
-    - ALB Target Group
-    - ALB Listener
+    - ALB Target Groups
+    - ALB HTTP Listener
     - ALB Rules
     - ALB Health Checks
 - [x] **IAM Roles & Policies**
