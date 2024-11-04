@@ -31,15 +31,9 @@ resource "aws_iam_role_policy" "codepipeline_policy" {
         "s3:GetObjectVersion",
         "s3:GetBucketVersioning",
         "s3:PutObjectAcl",
-        "s3:PutObject",
-        "iam:GetRole",
-        "iam:PassRole"
+        "s3:PutObject"
       ],
-      "Resource": [
-        "${aws_s3_bucket.codepipeline_bucket.arn}",
-        "${aws_s3_bucket.codepipeline_bucket.arn}/*",
-        "*"
-      ]
+      "Resource": ["*"]
     },
     {
       "Effect": "Allow",
@@ -71,10 +65,15 @@ resource "aws_iam_role_policy" "codepipeline_policy" {
     {
       "Effect": "Allow",
       "Action": [
-        "cloudformation:DescribeStacks",
-        "kms:GenerateDataKey",
         "iam:GetRole",
         "iam:PassRole"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ecs:RegisterTaskDefinition"
       ],
       "Resource": "*"
     }
