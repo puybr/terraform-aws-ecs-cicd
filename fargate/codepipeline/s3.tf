@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "codepipeline_bucket" {
-  bucket = "${var.app_name}-${var.s3_bucket_name}"
+  bucket = "${var.app_name}-${uuid()}"
 }
 
 resource "aws_s3_bucket_ownership_controls" "s3_bucket_acl_ownership" {
