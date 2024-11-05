@@ -15,7 +15,14 @@
 - Clone the repository
 - Rename the repository folder to the application name: `mv aws-iac-fargate <APP_NAME>`
 - `cd <APP_NAME>/fargate/<MODULE>/`
-- Replace the AWS providers profile variable in the "`main.tf`" file located in each module
+- Configure the AWS provider in the "`main.tf`" file located in each module:
+```sh
+# provider "aws" {
+    region = "us-east-2"
+    access_key = "*****"
+    secret_key = "*****"
+# }
+```
 - _Option 1_ - Add a "`terraform.tfvars`" file in each module directory and set the variables:
 ```sh
 aws_region=
