@@ -17,6 +17,8 @@ aws_secret_access_key = [*****]
 region = eu-west-2
 output = json
 ```
+- `aws configure [--profile profile-name]`
+
 ### Terraform Local Setup
 - Install [Chocolatey](https://chocolatey.org/install)
 - Install Terraform:
