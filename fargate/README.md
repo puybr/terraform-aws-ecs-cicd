@@ -27,8 +27,8 @@ output = json
 `terraform -version`
 
 #### _Example_ - Create a monolithic ECS module
-- `mkdir my_ecs_module`
-- `cd my_ecs_module`
+- `mkdir ecs-infra`
+- `cd ecs-infra`
 - Create the "`terraform.tf`" file in the `my_ecs_module` directory
 - Add the required AWS terraform providers block to the "`terraform.tf`" file:
 ```tf
