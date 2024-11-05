@@ -7,7 +7,7 @@
 
 ### How to setup:
 - Clone the repository
-- Rename the repository folder to the application name: `nodejs-express`:
+- Rename the repository folder to the application name:
 - `mv aws-iac-fargate nodejs-express`
 - `cd nodejs-express/fargate`
 - `cd <MODULE>`
