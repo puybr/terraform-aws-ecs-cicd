@@ -103,9 +103,9 @@ $ tree
 [Module Blocks](https://developer.hashicorp.com/terraform/language/modules/syntax):
 - Add the root module block to the "`main.tf`" file:
 ```sh
-module "ecs" {
+module "ecs-infra" {
   # path of the child module 
-  source = "./modules/ecs"
+  source = "./modules/ecs-infra"
   # variables
   environment = "dev"
 }
