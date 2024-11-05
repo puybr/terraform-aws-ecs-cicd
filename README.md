@@ -13,7 +13,6 @@
 - `cd <MODULE>`
 - Replace the AWS providers profile variable in the "`main.tf`" file located in each module
     - See the how-to guide [here](./fargate/README.md)
-    - `aws configure [--profile profile-name]`
 - Configure the [Codestar Connection](https://docs.aws.amazon.com/codepipeline/latest/userguide/connections-github.html) in the AWS console
 - _Option 1_ - Add a "`terraform.tfvars`" file in each module directory and set the variables:
 ```sh
