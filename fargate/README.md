@@ -106,7 +106,6 @@ module "ecs" {
 }
 ```
 
-
 ### Initialize and plan the module
 - Initialize the Terrform module in the root module directory:
 `terraform init`
@@ -131,6 +130,7 @@ $ terraform plan -var environment="dev"
 ### Destroy the module
 `terraform destroy`
 
+
 ## Terraform Variables
 - Terraform will automatically load any files with "`*.auto.tfvars`" and "`terraform.tfvars`"
 - The "`variable.tf`" file needs to have all the variables declared which can have a default value or not
@@ -150,6 +150,7 @@ prod.tfvars
 ```sh
 $ terraform apply -var-file="dev.tfvars"
 ```
+
 ## Terraform State
 - Terraform uses state data to remember which object corresponds to each resource in the configuration
 - The state is stored in the default "`terraform.tfstate`" file
@@ -208,6 +209,7 @@ Switched to workspace "default".
 $ terraform workspace delete dev
 Deleted workspace "dev"!
 ```
+
 ### Manage multiple environments
 1. Terraform workspaces
 2. [Terragrunt](https://terragrunt.gruntwork.io/) (_thin wrapper on top of Terraform_)
