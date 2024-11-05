@@ -6,7 +6,7 @@
 3. [codepipeline](./fargate/codepipeline)
 
 ### How to setup:
-- Create the IAM user and apply the required permissions
+- Create the IAM user and apply the required permissions for the role
 - Generate the AWS CLI access keys in the IAM console
 - Install and configure the AWS CLI:
    - See the how-to guide [here](./fargate/README.md)
