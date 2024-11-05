@@ -3,21 +3,19 @@
 ### AWS CLI Setup
 - Install and configure the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html): `aws configure`
 - _Optional_ - Create an AWS CLI profile:
-- `nano ~/.aws/credentials`
-
+`nano ~/.aws/credentials`
 ```sh
 [profile-name]
 aws_access_key_id = [*****]
 aws_secret_access_key = [*****]
 ```
-- `nano ~/.aws/config`
-
+`nano ~/.aws/config`
 ```
 [profile-name]
 region = eu-west-2
 output = json
 ```
-- `aws configure --profile profile-name`
+`aws configure --profile profile-name`
 
 ### Terraform Local Setup
 - Install [Chocolatey](https://chocolatey.org/install)
