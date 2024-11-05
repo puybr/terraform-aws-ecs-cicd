@@ -22,6 +22,11 @@
     secret_key = "*****"
 # }
 ```
+```sh
+# provider "aws" {
+    profile = "test"
+# }
+```
 - _Option 1_ - Add a "`terraform.tfvars`" file in each module directory and set the variables:
 ```sh
 aws_region=
