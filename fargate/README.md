@@ -112,7 +112,7 @@ module "ecs" {
 ```
 
 #### Manage multiple environments
-1. Terraform workspaces
+1. Terraform Workspaces
 2. [Terragrunt](https://terragrunt.gruntwork.io/) (_thin wrapper on top of Terraform_)
 3. [Separate modules in a directory structure](https://developer.hashicorp.com/terraform/tutorials/modules/organize-configuration) (_one branch_)
 4. Git branch per environment
@@ -150,6 +150,7 @@ $ terraform plan -var environment="dev"
 ```tf
 desired_count = var.environment == "prod" ? 2 : 1
 ```
+
 ### Managing variables with Terraform
 - For each environment, create a "`.tfvars`" file:
 ```sh
