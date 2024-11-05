@@ -101,6 +101,7 @@ $ tree
 - Add the module block to the "`main.tf`" file:
 ```sh
 module "ecs" {
+  # path of the child module 
   source = "./modules/ecs"
 
   environment = "dev"
