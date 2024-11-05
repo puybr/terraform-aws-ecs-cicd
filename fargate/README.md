@@ -102,7 +102,7 @@ $ tree
 module "ecs" {
   source = "./modules/ecs"
 
-  environment = "test"
+  environment = "dev"
 }
 ```
 
