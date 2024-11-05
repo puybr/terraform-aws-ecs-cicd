@@ -27,7 +27,8 @@ output = json
 #### _Example_ - Create an ECS module
 - `mkdir my_ecs_module`
 - `cd my_ecs_module`
-- Add the required AWS terraform providers "`terraform.tf`" file:
+- Create the "`terraform.tf`" file:
+- Add the required AWS terraform providers block to the "`terraform.tf`" file:
 ```tf
 terraform {
   required_providers {
@@ -38,7 +39,7 @@ terraform {
   }
 }
 ```
-Add the "`main.tf`" file:
+Create the "`main.tf`" file:
 ```tf
 # Configure the AWS Provider
 provider "aws" {
@@ -57,7 +58,7 @@ locals {
     account_id = data.aws_caller_identity.current.account_id
 }
 ```
-Add the "`variable.tf`" file:
+Create the "`variable.tf`" file:
 ```tf
 variable "aws_region" {
     description = "Default AWS region"
@@ -78,7 +79,7 @@ variable "ecs_cluster_name" {
 }
 ```
 
-Add an "`ecs.tf`" file:
+Create an "`ecs.tf`" file:
 ```tf
 resource "aws_ecs_cluster" "example" {
     name = "${var.environment}-${var.ecs_cluster_name}"
