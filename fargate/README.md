@@ -137,7 +137,7 @@ $ terraform plan -var environment="dev"
 - The "`.tfvars`" file is one way of associating variables to an environment
 - Conditionally assign values to different parameters based on the variables:
 ```tf
-instance_type = var.environment == "prod" ? "t2.macro" : "t2.nano"
+desired_count = var.environment == "prod" ? 2 : 1
 ```
 ### Managing variables with Terraform
 - For each environment, create a "`.tfvars`" file:
