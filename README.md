@@ -6,14 +6,16 @@
 3. [codepipeline](./fargate/codepipeline)
 
 ### How to setup:
+- Create the Terraform IAM user and generate the CLI access keys
+- Install and configure the AWS CLI:
+   - See the how-to guide [here](./fargate/README.md)
 - Configure the [Codestar Connection](https://docs.aws.amazon.com/codepipeline/latest/userguide/connections-github.html) in the AWS console
 - Clone the repository
 - Rename the repository folder to the application name:
 - `mv aws-iac-fargate nodejs-express`
 - `cd nodejs-express/fargate`
 - `cd <MODULE>`
-- Replace the AWS providers profile variable in the "`main.tf`" file located in each module:
-    - See the how-to guide [here](./fargate/README.md)
+- Replace the AWS providers profile variable in the "`main.tf`" file located in each module
 - _Option 1_ - Add a "`terraform.tfvars`" file in each module directory and set the variables:
 ```sh
 aws_region=
