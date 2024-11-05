@@ -24,6 +24,7 @@ output = json
 - Verify the installation:
 `terraform -version`
 - Make a new module:
+   - _Example_ - Create an ECS Cluster
 `mkdir my_terraform_module`
 `cd my_terraform_module`
 - Add the required AWS terraform providers "`terraform.tf`" file:
@@ -76,7 +77,6 @@ variable "ecs_cluster_name" {
     default = "ecs-docker"
 }
 ```
-_Example_ - Create an ECS Cluster
 
 Add an "`ecs.tf`" file:
 ```tf
