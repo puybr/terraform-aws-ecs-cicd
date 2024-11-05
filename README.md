@@ -21,7 +21,8 @@ app_count=
 
 ### How to run:
 - Clone the repository
-- Rename the repository folder to the application name: `nodejs-express`
+- Rename the repository folder to the application name: `nodejs-express`:
+- `mv aws-iac-fargate nodejs-express`
 - `cd nodejs-express/fargate/<MODULE>/`
 - Apply Terraform:
 ```sh
