@@ -84,5 +84,5 @@ terraform apply
 - [x] **CodeDeploy**
 - [X] **S3 Bucket Artifacts**
 
-### 💡Features
+### 💡 Features
 - [ ] Refactor monolithic Terraform configuration
