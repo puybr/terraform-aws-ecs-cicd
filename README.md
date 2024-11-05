@@ -12,6 +12,7 @@
 - Configure the [Codestar Connection](https://docs.aws.amazon.com/codepipeline/latest/userguide/connections-github.html)
 - Add a "`terraform.tfvars`" file in each module directory and set the variables:
 ```sh
+aws_region=
 app_name=
 app_port=
 ```
