@@ -29,7 +29,7 @@
     secret_key = "*****"
 # }
 ```
-- _Option 2_ - Create an additional AWS CLI profile:
+- _Option 2_ - Configure an additional AWS CLI profile:
 ```sh
 # provider "aws" {
     profile = "profile-name"
