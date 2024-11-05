@@ -26,7 +26,7 @@
 - _Optional_ - Create an additional profile or use the `default` profile:
 ```sh
 # provider "aws" {
-    profile = "test"
+    profile = "default"
 # }
 ```
 
