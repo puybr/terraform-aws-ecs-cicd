@@ -6,13 +6,12 @@
 2. [ecs-infra](./fargate/ecs-infra)
 3. [codepipeline](./fargate/codepipeline)
 
-
+> See the how-to guide [here](./fargate/README.md)
 
 ### How to setup:
 - Create the IAM user and apply the required permissions for the role
 - Generate the AWS CLI access keys in the IAM console
-- Install and configure the AWS CLI:
-   - See the how-to guide [here](./fargate/README.md)
+- Install and configure the AWS CLI
 - Configure the [Codestar Connection](https://docs.aws.amazon.com/codepipeline/latest/userguide/connections-github.html)
 - Clone the repository
 - Rename the repository folder to the application name: `mv aws-iac-fargate <APP_NAME>`
