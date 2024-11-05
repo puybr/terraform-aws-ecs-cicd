@@ -33,10 +33,10 @@
 #### Set the variables
 - _Option 1_ - Add a "`terraform.tfvars`" file in each module directory:
 ```sh
-aws_region=
-app_name=
-app_port=
-app_count=
+aws_region="eu-west-2"
+app_name="nodejs-express"
+app_port=3000
+app_count=1
 ...
 ```
 - _Option 2_ - Set the default variables directly in the "`variables.tf`" file
