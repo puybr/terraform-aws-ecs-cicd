@@ -210,7 +210,7 @@ env:/dev/terraform.tfstate
 env:/stag/terraform.tfstate
 env:/prod/terraform.tfstate
 ```
-Delete a workspace:
+- Delete a workspace:
 ```sh
 $ terraform workspace select default
 Switched to workspace "default".
