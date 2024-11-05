@@ -15,8 +15,8 @@
 - Rename the repository folder to the application name: `mv aws-iac-fargate <APP_NAME>`
 - `cd <APP_NAME>/fargate/<MODULE>/`
 
-#### Configure the AWS provider
-- The "`main.tf`" file is located in each module:
+#### Configure the AWS provider block
+- Located in the "`main.tf`" file in each module:
 ```sh
 # provider "aws" {
     access_key = "*****"
