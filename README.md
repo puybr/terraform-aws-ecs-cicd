@@ -9,7 +9,6 @@
 - Create an IAM user and apply the required permissions
 - Generate the AWS CLI access keys in the IAM console
 - Install and configure the AWS CLI:
-   - Create an additional profile or use the `default` profile
    - See the how-to guide [here](./fargate/README.md)
 - Configure the [Codestar Connection](https://docs.aws.amazon.com/codepipeline/latest/userguide/connections-github.html)
 - Clone the repository
@@ -22,6 +21,7 @@
     secret_key = "*****"
 # }
 ```
+- _Optional_ - Create an additional profile or use the `default` profile:
 ```sh
 # provider "aws" {
     profile = "test"
