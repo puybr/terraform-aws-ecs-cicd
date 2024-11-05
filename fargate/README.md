@@ -99,7 +99,27 @@ $ tree
 |-- ecs.tf
 |-- main.tf
 |-- terraform.tf
+|-- terraform.tfstate
+|-- terraform.tfvars
 `-- variables.tf
+```
+Separate Module Structure:
+```
+$ tree
+.
+├── ecs-infra
+│   ├── ecs.tf
+│   ├── terraform.tf
+├── prod
+│   ├── main.tf
+│   ├── variables.tf
+│   ├── terraform.tfstate
+│   └── terraform.tfvars
+└── dev
+   ├── main.tf
+   ├── variables.tf
+   ├── terraform.tfstate
+   └── terraform.tfvars
 ```
 
 [Module Blocks](https://developer.hashicorp.com/terraform/language/modules/syntax):
