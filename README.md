@@ -69,7 +69,7 @@ terraform apply
 - [x] **Application Load Balancer** (ALB)
     - ALB Target Groups
     - ALB HTTP Listener
-    - ALB Rules
+    - ALB Listener Rules
     - ALB Health Checks
 - [ ] **IAM Roles & Policies**
 - [x] **Security Groups**
