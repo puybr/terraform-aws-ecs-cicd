@@ -6,7 +6,7 @@
 3. [codepipeline](./fargate/codepipeline)
 
 ### How to setup:
-- Create a Terraform IAM user and apply the required permissions
+- Create an IAM user and apply the required permissions
 - Generate the AWS CLI access
 - Install and configure the AWS CLI:
    - See the how-to guide [here](./fargate/README.md)
