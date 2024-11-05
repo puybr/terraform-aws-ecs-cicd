@@ -1,7 +1,7 @@
 # AWS Terraform
 
 ### AWS CLI Setup
-- Install and configure [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+- Install and configure the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 - _Optional_ - Create an additional AWS CLI profile:
 - `nano ~/.aws/credentials`
 
