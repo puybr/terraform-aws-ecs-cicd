@@ -67,7 +67,7 @@ variable "aws_region" {
 variable "environment" {
     description = "Default environment: dev, stag, prod"
     type = string
-    default = "test"
+    default = "temp"
 }
  
 variable "ecs_cluster_name" {
