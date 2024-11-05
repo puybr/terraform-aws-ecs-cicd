@@ -27,7 +27,9 @@
     profile = "test"
 # }
 ```
-- _Option 1_ - Add a "`terraform.tfvars`" file in each module directory and set the variables:
+
+#### Set the variables
+- _Option 1_ - Add a "`terraform.tfvars`" file in each module directory:
 ```sh
 aws_region=
 app_name=
