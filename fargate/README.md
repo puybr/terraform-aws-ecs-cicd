@@ -96,6 +96,17 @@ $ tree
 |-- terraform.tf
 `-- variables.tf
 ```
+
+[Module Blocks](https://developer.hashicorp.com/terraform/language/modules/syntax):
+```sh
+module "ecs" {
+  source = "./modules/ecs"
+
+  environment = "test"
+}
+```
+
+
 ### Initialize and plan the module
 - Initialize the Terrform module in the root module directory:
 `terraform init`
