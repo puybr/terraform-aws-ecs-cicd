@@ -26,7 +26,7 @@
 - _Optional_ - Create an additional AWS CLI profile or use the `default` profile:
 ```sh
 # provider "aws" {
-    profile = "default"
+    profile = "profile-name"
 # }
 ```
 
