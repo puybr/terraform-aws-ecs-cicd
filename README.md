@@ -15,7 +15,7 @@
     - See the how-to guide [here](./fargate/README.md)
     - `aws configure [--profile profile-name]`
 - Configure the [Codestar Connection](https://docs.aws.amazon.com/codepipeline/latest/userguide/connections-github.html) in the AWS console
-- Add a "`terraform.tfvars`" file in each module directory and set the variables:
+- _Option 1_ - Add a "`terraform.tfvars`" file in each module directory and set the variables:
 ```sh
 aws_region=
 app_name=
@@ -23,6 +23,7 @@ app_port=
 app_count=
 ...
 ```
+- _Option 2_ - Set the default variables directly in the "`variables.tf`" file
 
 ### How to run the module:
 ```sh
