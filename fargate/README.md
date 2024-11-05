@@ -168,7 +168,7 @@ $ terraform apply -var-file="dev.tfvars"
 ## Terraform State
 - Terraform uses state data to remember which object corresponds to each resource in the configuration
 - The state is stored in the default "`terraform.tfstate`" file
-- List the local Terraform state:
+- List the Terraform state:
 ```sh
 $ terraform state list
 ```
