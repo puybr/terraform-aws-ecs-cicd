@@ -70,7 +70,7 @@ terraform apply
     - ALB HTTP Listener
     - ALB Listener Rules
     - Target Groups
-    - Targat Group Health Checks
+    - Target Group Health Checks
 - [ ] **IAM Roles & Policies**
 - [x] **Security Groups**
 - [x] **Systems Manager Parameter Store** (SSM)
