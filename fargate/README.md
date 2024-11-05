@@ -116,10 +116,10 @@ $ tree
 │   ├── terraform.tfstate
 │   └── terraform.tfvars
 └── dev
-   ├── main.tf
-   ├── variables.tf
-   ├── terraform.tfstate
-   └── terraform.tfvars
+    ├── main.tf
+    ├── variables.tf
+    ├── terraform.tfstate
+    └── terraform.tfvars
 ```
 
 [Module Blocks](https://developer.hashicorp.com/terraform/language/modules/syntax):
