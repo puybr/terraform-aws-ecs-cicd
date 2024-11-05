@@ -96,12 +96,12 @@ Monolithic Module Structure:
 ```sh
 $ tree
 .
-|-- ecs.tf
-|-- main.tf
-|-- terraform.tf
-|-- terraform.tfstate
-|-- terraform.tfvars
-`-- variables.tf
+├── ecs.tf
+├── main.tf
+├── terraform.tf
+├── terraform.tfstate
+├── terraform.tfvars
+└── variables.tf
 ```
 Separate Module Structure:
 ```
