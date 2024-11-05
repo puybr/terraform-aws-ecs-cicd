@@ -53,14 +53,14 @@ app_count=1
 - _Option 2_ - Set the default variables directly in the "`variables.tf`" file
 
 
-### How to run the module:
+### 🚀 How to run the module:
 ```sh
 terraform init
 terraform plan
 terraform apply
 ```
 
-### AWS Resources:
+### ☁️ AWS Resources:
 - [x] **Virtual Private Cloud** (VPC)
     - Subnets
     - Internet Gateway
