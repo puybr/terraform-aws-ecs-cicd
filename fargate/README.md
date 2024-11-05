@@ -27,7 +27,7 @@ output = json
 #### _Example_ - Create an ECS module
 - `mkdir my_ecs_module`
 - `cd my_ecs_module`
-- Create the "`terraform.tf`" file:
+- Create the "`terraform.tf`" file in the `my_ecs_module` directory
 - Add the required AWS terraform providers block to the "`terraform.tf`" file:
 ```tf
 terraform {
