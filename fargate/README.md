@@ -127,7 +127,7 @@ $ tree
 ```sh
 module "ecs-infra" {
   # path of the child module 
-  source = "../modules/ecs-infra"
+  source = "../ecs-infra"
   # variables
   environment = "dev"
 }
