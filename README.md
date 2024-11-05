@@ -16,7 +16,7 @@
 - `cd <APP_NAME>/fargate/<MODULE>/`
 
 #### Configure the AWS provider
-- "`main.tf`" file located in each module:
+- The "`main.tf`" file located in each module:
 ```sh
 # provider "aws" {
     access_key = "*****"
