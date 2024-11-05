@@ -14,8 +14,8 @@
 - Install and configure the AWS CLI
 - Configure the [Codestar Connection](https://docs.aws.amazon.com/codepipeline/latest/userguide/connections-github.html)
 - Clone the repository
-- Rename the repository folder to the application name: `mv <REPO> <APP_NAME>`
-- `cd <APP_NAME>/fargate/<MODULE>/`
+- Rename the repository folder to the application name: `mv <REPO> <APP>`
+- `cd <APP>/fargate/<MODULE>/`
 
 
 
