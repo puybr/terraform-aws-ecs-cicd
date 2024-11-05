@@ -61,7 +61,7 @@ locals {
     account_id = data.aws_caller_identity.current.account_id
 }
 ```
-Create the "`variable.tf`" file:
+Create the "`variables.tf`" file:
 ```tf
 variable "aws_region" {
     description = "Default AWS region"
