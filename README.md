@@ -31,7 +31,7 @@ terraform apply
     - ALB HTTP Listener
     - ALB Rules
     - ALB Health Checks
-- [x] **IAM Roles & Policies**
+- [ ] **IAM Roles & Policies**
 - [x] **Security Groups**
 - [x] **Systems Manager Parameter Store** (SSM)
 - [x] **Elastic Container Registry** (ECR)
