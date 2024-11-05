@@ -15,6 +15,8 @@
 aws_region=
 app_name=
 app_port=
+app_count=
+...
 ```
 
 ### How to run:
