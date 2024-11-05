@@ -18,7 +18,6 @@
 - Configure the AWS provider in the "`main.tf`" file located in each module:
 ```sh
 # provider "aws" {
-    region = "us-east-2"
     access_key = "*****"
     secret_key = "*****"
 # }
