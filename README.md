@@ -1,9 +1,12 @@
 # 🚜 AWS Docker Infrastructure
 
+
 ### Terraform Modules:
 1. [ecr-infra](./fargate/ecr-infra)
 2. [ecs-infra](./fargate/ecs-infra)
 3. [codepipeline](./fargate/codepipeline)
+
+
 
 ### How to setup:
 - Create the IAM user and apply the required permissions for the role
@@ -15,28 +18,29 @@
 - Rename the repository folder to the application name: `mv aws-iac-fargate <APP_NAME>`
 - `cd <APP_NAME>/fargate/<MODULE>/`
 
+
+
 #### Configure the AWS provider block
-- Located in the "`main.tf`" file in each module:
+- Located in the "`main.tf`" file in each module
+- _Option 1_ - Add the AWS access key and secret key:
 ```sh
 # provider "aws" {
     access_key = "*****"
     secret_key = "*****"
 # }
 ```
-- _Optional_ - Create an additional AWS CLI profile:
+- _Option 2_ - Create an additional AWS CLI profile:
 ```sh
 # provider "aws" {
     profile = "profile-name"
 # }
 ```
-- _Optional_ - Export the keys and omit the values:
+- _Option 3_ - Export the keys and omit the values from the provider:
 ```sh
 export AWS_ACCESS_KEY_ID=*****
 export AWS_SECRET_ACCESS_KEY=*****
-
-# provider "aws" {
-# }
 ```
+
 
 #### Set the variables
 - _Option 1_ - Add a "`terraform.tfvars`" file in each module directory:
@@ -48,6 +52,7 @@ app_count=1
 ...
 ```
 - _Option 2_ - Set the default variables directly in the "`variables.tf`" file
+
 
 ### How to run the module:
 ```sh
