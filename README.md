@@ -10,6 +10,7 @@
 - Rename the repository folder to the application name: `nodejs-express`:
 - `mv aws-iac-fargate nodejs-express`
 - `cd nodejs-express/fargate`
+- `cd <MODULE>`
 - Modify the AWS providers profile in the "`main.tf`" file located in each module
     - See the how-to guide [here](./fargate/README.md)
     - `aws configure [--profile profile-name]`
@@ -24,8 +25,6 @@ app_count=
 ```
 
 ### How to run:
-- `cd <MODULE>`
-- Apply Terraform:
 ```sh
 terraform init
 terraform plan
