@@ -134,7 +134,7 @@ environment="dev"
 ```
 - _Option 2_: Override specific variables in the CLI:
 ```tf
-$ terraform plan -var environment="dev"
+terraform plan -var environment="dev"
 ```
 ### Apply the module
 `terraform apply`
@@ -162,7 +162,7 @@ prod.tfvars
 ```
 - Based on the environment, run apply using the variable file:
 ```sh
-$ terraform apply -var-file="dev.tfvars"
+terraform apply -var-file="dev.tfvars"
 ```
 
 ## Terraform State
@@ -170,7 +170,7 @@ $ terraform apply -var-file="dev.tfvars"
 - The state is stored in the default "`terraform.tfstate`" file
 - List the Terraform state:
 ```sh
-$ terraform state list
+terraform state list
 ```
 - The remote Terraform state is stored in the [S3 bucket backend](https://developer.hashicorp.com/terraform/language/backend/s3)
 - The DynamoDB table supports state locking, consistency checking and can configure multiple remote state files
