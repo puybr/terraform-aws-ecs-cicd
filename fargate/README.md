@@ -174,7 +174,7 @@ $ terraform state list
 ```
 - The remote Terraform state is stored in the [S3 bucket backend](https://developer.hashicorp.com/terraform/language/backend/s3)
 - The DynamoDB table supports state locking, consistency checking and can configure multiple remote state files
-- Add the backend config to the "`terraform.tf`" providers block:
+- Add the backend config to the `terraform` providers block:
 ```tf
 # terraform {
     backend "s3" {
