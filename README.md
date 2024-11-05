@@ -67,10 +67,10 @@ terraform apply
     - Route Tables
     - NAT Gateway
 - [x] **Application Load Balancer** (ALB)
-    - ALB Target Groups
     - ALB HTTP Listener
     - ALB Listener Rules
-    - ALB Health Checks
+    - Target Groups
+    - Targat Group Health Checks
 - [ ] **IAM Roles & Policies**
 - [x] **Security Groups**
 - [x] **Systems Manager Parameter Store** (SSM)
