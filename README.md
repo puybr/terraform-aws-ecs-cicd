@@ -21,7 +21,7 @@
 
 #### Configure the AWS provider block
 - Located in the "`main.tf`" file in each module
-- _Option 1_ - Add the AWS access key and secret key:
+- _Option 1_ - Add the AWS access and secret keys:
 ```sh
 # provider "aws" {
     access_key = "*****"
