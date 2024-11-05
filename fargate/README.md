@@ -98,6 +98,7 @@ $ tree
 ```
 
 [Module Blocks](https://developer.hashicorp.com/terraform/language/modules/syntax):
+- Add the module block to the "`main.tf`" file:
 ```sh
 module "ecs" {
   source = "./modules/ecs"
