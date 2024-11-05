@@ -86,5 +86,5 @@ terraform apply
 
 ### 💡 Features
 - [ ] Refactor monolithic Terraform configuration
-- [ ] S3 remote backend
-- [ ] [Lock and upgrade provider versions](https://developer.hashicorp.com/terraform/tutorials/configuration-language/provider-versioning)
+- [ ] Add a S3 remote backend
+- [ ] Lock and upgrade [provider versions](https://developer.hashicorp.com/terraform/tutorials/configuration-language/provider-versioning)
