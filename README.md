@@ -13,8 +13,8 @@
    - See the how-to guide [here](./fargate/README.md)
 - Configure the [Codestar Connection](https://docs.aws.amazon.com/codepipeline/latest/userguide/connections-github.html)
 - Clone the repository
-- Rename the repository folder to the application name: `mv aws-iac-fargate <APPLICATION_NAME>`
-- `cd <APPLICATION_NAME>/fargate/<MODULE>/`
+- Rename the repository folder to the application name: `mv aws-iac-fargate <APP_NAME>`
+- `cd <APP_NAME>/fargate/<MODULE>/`
 - Replace the AWS providers profile variable in the "`main.tf`" file located in each module
 - _Option 1_ - Add a "`terraform.tfvars`" file in each module directory and set the variables:
 ```sh
