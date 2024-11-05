@@ -24,7 +24,7 @@ app_count=
 ...
 ```
 
-### How to run:
+### How to run the module:
 ```sh
 terraform init
 terraform plan
