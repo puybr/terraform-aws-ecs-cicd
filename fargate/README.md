@@ -23,9 +23,10 @@ output = json
 `choco install terraform`
 - Verify the installation:
 `terraform -version`
+
 #### _Example_ - Create an ECS module
-- `mkdir my_terraform_module`
-- `cd my_terraform_module`
+- `mkdir my_ecs_module`
+- `cd my_ecs_module`
 - Add the required AWS terraform providers "`terraform.tf`" file:
 ```tf
 terraform {
