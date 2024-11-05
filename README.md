@@ -86,3 +86,4 @@ terraform apply
 
 ### 💡 Features
 - [ ] Refactor monolithic Terraform configuration
+- [ ] S3 remote backend
