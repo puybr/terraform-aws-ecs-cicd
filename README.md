@@ -13,8 +13,7 @@
    - See the how-to guide [here](./fargate/README.md)
 - Configure the [Codestar Connection](https://docs.aws.amazon.com/codepipeline/latest/userguide/connections-github.html)
 - Clone the repository
-- Rename the repository folder to the application name:
-   - `mv aws-iac-fargate nodejs-express`
+- Rename the repository folder to the application name: `mv aws-iac-fargate nodejs-express`
 - `cd nodejs-express/fargate`
 - `cd <MODULE>`
 - Replace the AWS providers profile variable in the "`main.tf`" file located in each module
