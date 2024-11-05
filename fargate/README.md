@@ -103,7 +103,7 @@ $ tree
 module "ecs" {
   # path of the child module 
   source = "./modules/ecs"
-
+  # variables
   environment = "dev"
 }
 ```
