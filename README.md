@@ -6,8 +6,8 @@
 3. [codepipeline](./fargate/codepipeline)
 
 ### How to setup:
-- Create the Terraform IAM user and generate the CLI access keys
-- Apply the required permissions to the user
+- Create the Terraform IAM user and apply the required permissions
+- Generate the AWS CLI access
 - Install and configure the AWS CLI:
    - See the how-to guide [here](./fargate/README.md)
 - Configure the [Codestar Connection](https://docs.aws.amazon.com/codepipeline/latest/userguide/connections-github.html) in the AWS console
