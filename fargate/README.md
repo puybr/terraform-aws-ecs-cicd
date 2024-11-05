@@ -83,6 +83,7 @@ variable "ecs_cluster_name" {
 
 Create the "`ecs.tf`" file:
 ```tf
+# Create ECS cluster
 resource "aws_ecs_cluster" "example" {
     name = "${var.environment}-${var.ecs_cluster_name}"
 }
