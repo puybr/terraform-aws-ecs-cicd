@@ -85,6 +85,6 @@ terraform apply
 - [X] **S3 Bucket Artifacts**
 
 ### 💡 Features
-- [ ] Refactor monolithic Terraform configuration
+- [ ] Refactor to a monolithic Terraform configuration
 - [ ] Add a S3 remote backend
-- [ ] Lock and upgrade [provider versions](https://developer.hashicorp.com/terraform/tutorials/configuration-language/provider-versioning)
+- [ ] Lock and upgrade the [provider versions](https://developer.hashicorp.com/terraform/tutorials/configuration-language/provider-versioning)
