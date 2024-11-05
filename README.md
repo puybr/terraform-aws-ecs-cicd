@@ -29,6 +29,11 @@
     profile = "profile-name"
 # }
 ```
+- _Optional_ - Export the keys and omit the values:
+```sh
+export AWS_ACCESS_KEY_ID=*****
+export AWS_SECRET_ACCESS_KEY=*****
+```
 
 #### Set the variables
 - _Option 1_ - Add a "`terraform.tfvars`" file in each module directory:
