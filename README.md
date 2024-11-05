@@ -7,10 +7,10 @@
 
 ### How to setup:
 - Create an IAM user and apply the required permissions
-- Generate the AWS CLI access
+- Generate the AWS CLI access in the IAM console
 - Install and configure the AWS CLI:
    - See the how-to guide [here](./fargate/README.md)
-- Configure the [Codestar Connection](https://docs.aws.amazon.com/codepipeline/latest/userguide/connections-github.html) in the AWS console
+- Configure the [Codestar Connection](https://docs.aws.amazon.com/codepipeline/latest/userguide/connections-github.html)
 - Clone the repository
 - Rename the repository folder to the application name:
 - `mv aws-iac-fargate nodejs-express`
