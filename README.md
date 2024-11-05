@@ -7,7 +7,7 @@
 
 ### How to setup:
 - Create an IAM user and apply the required permissions
-- Generate the AWS CLI access in the IAM console
+- Generate the AWS CLI access keys in the IAM console
 - Install and configure the AWS CLI:
    - Create an additional profile or use the `default` profile
    - See the how-to guide [here](./fargate/README.md)
