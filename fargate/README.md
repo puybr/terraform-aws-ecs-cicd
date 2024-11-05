@@ -26,7 +26,7 @@ output = json
 - Verify the installation:
 `terraform -version`
 
-#### _Example_ - Create an ECS module
+#### _Example_ - Create a monolithic ECS module
 - `mkdir my_ecs_module`
 - `cd my_ecs_module`
 - Create the "`terraform.tf`" file in the `my_ecs_module` directory
