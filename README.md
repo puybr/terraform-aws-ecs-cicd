@@ -23,7 +23,7 @@
     secret_key = "*****"
 # }
 ```
-- _Optional_ - Create an additional profile or use the `default` profile:
+- _Optional_ - Create an additional AWS CLI profile or use the `default` profile:
 ```sh
 # provider "aws" {
     profile = "default"
