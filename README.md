@@ -11,7 +11,7 @@
 - `mv aws-iac-fargate nodejs-express`
 - `cd nodejs-express/fargate`
 - `cd <MODULE>`
-- Modify the AWS providers profile in the "`main.tf`" file located in each module
+- Replace the AWS providers profile variable in the "`main.tf`" file located in each module
     - See the how-to guide [here](./fargate/README.md)
     - `aws configure [--profile profile-name]`
 - Configure the [Codestar Connection](https://docs.aws.amazon.com/codepipeline/latest/userguide/connections-github.html) in the AWS console
