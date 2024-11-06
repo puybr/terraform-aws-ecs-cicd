@@ -16,7 +16,6 @@ resource "aws_iam_role" "codepipeline_role" {
   assume_role_policy = data.aws_iam_policy_document.assume_by_codepipeline.json
 }
 
-
 data "aws_iam_policy_document" "codepipeline_policy" {
   statement {
     sid    = "s3Service"
