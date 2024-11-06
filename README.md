@@ -21,26 +21,19 @@
 
 #### Modify the AWS provider block
 - Located in the "`main.tf`" file in each module
-- _Option 1_ - Add the AWS access and secret keys:
+- _Option 1_ - Configure an additional AWS CLI profile:
 ```sh
 # provider "aws" {
-    access_key = "*****"
-    secret_key = "*****"
+    profile = "profile-name"
 # }
 ```
-- _Option 2_ - Configure an additional AWS CLI profile:
-```sh
-# provider "aws" {
-    profile = "test"
-# }
-```
-- _Option 3_ - Set the AWS environment variables in the terminal and omit the values from the provider:
+- _Option 2_ - Set the AWS environment variables in the terminal and omit the values from the provider:
 ```sh
 export AWS_ACCESS_KEY_ID=*****
 export AWS_SECRET_ACCESS_KEY=*****
 export AWS_SESSION_TOKEN=*****
 ```
-- _Option 4_ - Use SSO with with the [IAM Identity Center](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html#sso-configure-profile-token-auto-sso) and omit the values from the provider
+- _Option 3_ - Use SSO with with the [IAM Identity Center](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html#sso-configure-profile-token-auto-sso) and omit the values from the provider
 
 
 #### Set the variables
