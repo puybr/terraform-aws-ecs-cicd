@@ -4,7 +4,7 @@
 ### Terraform Modules:
 1. [ecr-infra](./fargate/ecr-infra)
 2. [ecs-infra](./fargate/ecs-infra)
-3. [codepipeline](./fargate/codepipeline)
+3. [cicd](./fargate/cicd)
 
 > ✏️ See the tutorial [here](./fargate/README.md)
 
