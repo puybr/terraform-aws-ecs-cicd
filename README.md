@@ -34,7 +34,7 @@
     profile = "profile-name"
 # }
 ```
-- _Option 3_ - Export the keys as environment variables and omit the values from the provider:
+- _Option 3_ - Run the following commands in your terminal to set the AWS environment variables and omit the values from the provider:
 ```sh
 export AWS_ACCESS_KEY_ID=*****
 export AWS_SECRET_ACCESS_KEY=*****
