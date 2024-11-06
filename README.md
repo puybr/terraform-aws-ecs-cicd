@@ -65,7 +65,7 @@ terraform apply
     - ALB Listener Rules
     - Target Groups
     - Target Group Health Checks
-- [ ] **IAM Roles & Policies**
+- [x] **IAM Roles & Policies**
 - [x] **Security Groups**
 - [x] **Systems Manager Parameter Store** (SSM)
 - [x] **Elastic Container Registry** (ECR)
