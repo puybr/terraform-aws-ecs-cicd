@@ -31,7 +31,7 @@
 - _Option 2_ - Configure an additional AWS CLI profile:
 ```sh
 # provider "aws" {
-    profile = "profile-name"
+    profile = "test"
 # }
 ```
 - _Option 3_ - Set the AWS environment variables in the terminal and omit the values from the provider:
