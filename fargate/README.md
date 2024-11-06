@@ -20,7 +20,7 @@ output = json
 #### _Option 2_ - Configure SSO with IAM Identity Center authentication:
 - `aws configure sso --profile test`
 ```sh
-[profile-name]
+[default]
 region = eu-west-2
 output = json
 
