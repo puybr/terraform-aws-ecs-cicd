@@ -17,6 +17,21 @@ output = json
 ```
 `aws configure --profile profile-name`
 
+- _Optional_ - Configure SSO:
+```sh
+[profile user1]
+sso_session = my-sso
+sso_account_id = 444455556666
+sso_role_name = readOnly
+region = eu-west-2
+output = json
+
+[sso-session my-sso]
+sso_region = eu-west-2
+sso_start_url = https://my-sso-portal.awsapps.com/start
+sso_registration_scopes = sso:account:access
+```
+
 ### Terraform Local Setup
 - Install [Chocolatey](https://chocolatey.org/install)
 - Install Terraform:
