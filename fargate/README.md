@@ -2,7 +2,7 @@
 
 ### AWS CLI Setup
 - Install and configure the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
-#### _Option 1_ - Create an AWS CLI profile and add the keys:
+#### _Option 1_ - Create a new AWS CLI profile and add the keys:
 - `aws configure --profile test`
 - `nano ~/.aws/credentials`
 ```sh
