@@ -25,6 +25,11 @@ aws_secret_access_key = [*****]
 region = eu-west-2
 output = json
 ```
+```sh
+# provider "aws" {
+    profile = "profile-name"
+# }
+```
 
 #### _Option 3_ - Configure SSO with IAM Identity Center authentication:
 - `aws configure sso --profile test`
