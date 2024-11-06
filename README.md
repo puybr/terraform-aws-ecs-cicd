@@ -39,6 +39,7 @@ export AWS_SESSION_TOKEN=*****
 - _Option 1_ - Add a "`terraform.tfvars`" file in each module directory:
 ```sh
 aws_region="eu-west-2"
+az_count=1
 app_name="nodejs-express"
 app_port=3000
 app_count=1
