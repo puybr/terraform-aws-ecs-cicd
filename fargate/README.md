@@ -20,10 +20,6 @@ output = json
 #### _Option 2_ - Configure SSO with IAM Identity Center authentication:
 - `aws configure sso --profile test`
 ```sh
-[default]
-region = eu-west-2
-output = json
-
 [profile test]
 sso_session = my-sso
 sso_account_id = 444455556666
