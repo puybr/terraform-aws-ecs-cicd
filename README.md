@@ -21,7 +21,7 @@
 
 #### Modify the AWS provider block
 - Located in the "`main.tf`" file in each module
-- _Option 1_ - Configure an additional AWS CLI profile:
+- _Option 1_ - Configure an additional AWS CLI profile: `aws configure --profile profile-name`
 ```sh
 # provider "aws" {
     profile = "profile-name"
