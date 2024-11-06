@@ -38,7 +38,7 @@ output = json
 [profile test]
 sso_session = test-sso
 sso_account_id = 444455556666
-sso_role_name = readOnly
+sso_role_name = roleName
 region = eu-west-2
 output = json
 
