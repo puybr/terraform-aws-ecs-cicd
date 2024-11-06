@@ -11,7 +11,7 @@
 # }
 ```
 
-#### _Option 2_ - Configure a new "`test`" AWS CLI profile and add the keys:
+#### _Option 2_ - Configure a new AWS CLI profile and add the keys:
 - `aws configure --profile test`
 - `nano ~/.aws/credentials`
 ```sh
