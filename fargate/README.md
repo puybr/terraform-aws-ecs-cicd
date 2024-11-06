@@ -78,7 +78,7 @@ Create the "`main.tf`" file:
 # Configure the AWS Provider
 provider "aws" {
   region = var.aws_region
-  profile = "profile-name"
+  profile = "test"
 }
 
 # Retrieve availability zones for the current region
