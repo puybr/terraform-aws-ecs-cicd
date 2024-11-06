@@ -19,7 +19,11 @@ output = json
 
 #### _Option 2_ - Configure SSO with IAM Identity Center authentication:
 ```sh
-[profile profile-name]
+[profile-name]
+region = eu-west-2
+output = json
+
+[profile test]
 sso_session = my-sso
 sso_account_id = 444455556666
 sso_role_name = readOnly
@@ -31,8 +35,8 @@ sso_region = eu-west-2
 sso_start_url = https://my-sso-portal.awsapps.com/start
 sso_registration_scopes = sso:account:access
 ```
-- `aws configure sso --profile profile-name`
-- `aws sso login --profile profile-name`
+- `aws configure sso --profile test`
+- `aws sso login --profile test`
 
 ### Terraform Local Setup
 - Install [Chocolatey](https://chocolatey.org/install)
