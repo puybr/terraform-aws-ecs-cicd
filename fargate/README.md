@@ -15,7 +15,7 @@ aws_secret_access_key = [*****]
 region = eu-west-2
 output = json
 ```
-`aws configure --profile profile-name`
+- `aws configure --profile profile-name`
 
 - _Optional_ - Configure SSO:
 ```sh
@@ -31,6 +31,7 @@ sso_region = eu-west-2
 sso_start_url = https://my-sso-portal.awsapps.com/start
 sso_registration_scopes = sso:account:access
 ```
+- `aws configure sso`
 
 ### Terraform Local Setup
 - Install [Chocolatey](https://chocolatey.org/install)
