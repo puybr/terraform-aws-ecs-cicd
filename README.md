@@ -33,7 +33,7 @@ export AWS_ACCESS_KEY_ID=*****
 export AWS_SECRET_ACCESS_KEY=*****
 export AWS_SESSION_TOKEN=*****
 ```
-- _Option 3_ - SSO with the [IAM Identity Center](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html#sso-configure-profile-token-auto-sso) and omit the values from the provider
+- _Option 3_ - SSO with the [IAM Identity Center](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html#sso-configure-profile-token-auto-sso)
 
 
 #### Set the variables
