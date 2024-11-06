@@ -11,13 +11,13 @@
 
 #### _Option 2_ - Configure a new AWS CLI profile:
 - `aws configure --profile test`
-- `nano ~/.aws/credentials`
+- `cat ~/.aws/credentials`
 ```sh
 [test]
 aws_access_key_id = [*****]
 aws_secret_access_key = [*****]
 ```
-- `nano ~/.aws/config`
+- `cat ~/.aws/config`
 ```
 [test]
 region = eu-west-2
