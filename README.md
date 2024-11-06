@@ -19,7 +19,7 @@
 
 
 
-#### Configure the AWS provider block
+#### Modify the AWS provider block
 - Located in the "`main.tf`" file in each module
 - _Option 1_ - Add the AWS access and secret keys:
 ```sh
