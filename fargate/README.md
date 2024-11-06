@@ -3,6 +3,7 @@
 ### AWS CLI Setup
 - Install and configure the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 #### _Option 1_ - Create an AWS CLI profile:
+- `aws configure --profile profile-name`
 - `nano ~/.aws/credentials`
 ```sh
 [profile-name]
@@ -15,9 +16,9 @@ aws_secret_access_key = [*****]
 region = eu-west-2
 output = json
 ```
-- `aws configure --profile profile-name`
 
 #### _Option 2_ - Configure SSO with IAM Identity Center authentication:
+- `aws configure sso --profile test`
 ```sh
 [profile-name]
 region = eu-west-2
@@ -35,7 +36,6 @@ sso_region = eu-west-2
 sso_start_url = https://my-sso-portal.awsapps.com/start
 sso_registration_scopes = sso:account:access
 ```
-- `aws configure sso --profile test`
 - `aws sso login --profile test`
 
 ### Terraform Local Setup
