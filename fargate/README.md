@@ -10,24 +10,24 @@
 ```
 
 #### _Option 2_ - Configure a new AWS CLI profile:
-- `aws configure --profile test`
+- `aws configure --profile profile-name`
 - `cat ~/.aws/credentials`
 ```sh
-[test]
+[profile-name]
 aws_access_key_id = [*****]
 aws_secret_access_key = [*****]
 ```
 - `cat ~/.aws/config`
 ```
-[test]
+[profile-name]
 region = eu-west-2
 output = json
 ```
 
 #### _Option 3_ - Configure a new profile with [IAM Identity Center](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html#sso-configure-profile-token-auto-sso) authentication:
-- `aws configure sso --profile test`
+- `aws configure sso --profile profile-name `
 ```sh
-[profile test]
+[profile profile-name]
 sso_session = test-sso
 sso_account_id = 444455556666
 sso_role_name = roleName
@@ -40,12 +40,12 @@ sso_start_url = https://my-sso-portal.awsapps.com/start
 sso_registration_scopes = sso:account:access
 ```
 - `cat ~/.aws/config`
-- `aws sso login --profile test` `aws sso logout --profile test`
+- `aws sso login --profile test` `aws sso logout --profile profile-name `
 
 ##### Add the profile value to the provider block:
 ```sh
 # provider "aws" {
-    profile = "test"
+    profile = "profile-name"
 # }
 ```
 
@@ -76,7 +76,7 @@ Create the "`main.tf`" file:
 # Configure the AWS Provider
 provider "aws" {
   region = var.aws_region
-  profile = "test"
+  profile = "profile-name"
 }
 
 # Retrieve availability zones for the current region
@@ -232,7 +232,7 @@ terraform state list
     region             = "eu-west-2"
     dynamodb_table     = "components_tf_lockid"
     encrypt            = true
-    profile            = "test"
+    profile            = "profile-name"
     }
 # }
 ```
