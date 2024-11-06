@@ -26,7 +26,7 @@ region = eu-west-2
 output = json
 ```
 
-#### _Option 3_ - Configure SSO with [IAM Identity Center](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html#sso-configure-profile-token-auto-sso) authentication:
+#### _Option 3_ - Configure a new profile with [IAM Identity Center](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html#sso-configure-profile-token-auto-sso) authentication:
 - `aws configure sso --profile test`
 ```sh
 [profile test]
