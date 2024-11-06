@@ -37,6 +37,7 @@ sso_start_url = https://my-sso-portal.awsapps.com/start
 sso_registration_scopes = sso:account:access
 ```
 - `aws sso login --profile test`
+- `aws sso logout --profile test`
 
 ### Terraform Local Setup
 - Install [Chocolatey](https://chocolatey.org/install)
