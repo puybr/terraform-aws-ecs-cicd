@@ -32,7 +32,7 @@ sso_region = eu-west-2
 sso_start_url = https://my-sso-portal.awsapps.com/start
 sso_registration_scopes = sso:account:access
 ```
-- `nano ~/.aws/credentials`
+- `cat ~/.aws/config`
 - `aws sso login --profile test`
 - `aws sso logout --profile test`
 
