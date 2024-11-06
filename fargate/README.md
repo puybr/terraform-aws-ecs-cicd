@@ -233,7 +233,7 @@ terraform state list
     region             = "eu-west-2"
     dynamodb_table     = "components_tf_lockid"
     encrypt            = true
-    profile            = "profile-name"
+    profile            = "test"
     }
 # }
 ```
