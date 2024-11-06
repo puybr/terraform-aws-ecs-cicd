@@ -17,7 +17,7 @@ output = json
 ```
 - `aws configure --profile profile-name`
 
-- _Optional_ - Configure SSO:
+- _Optional_ - Configure SSO with IAM Identity Center authentication:
 ```sh
 [profile-name]
 sso_session = my-sso
