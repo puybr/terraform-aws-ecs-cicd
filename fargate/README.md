@@ -2,7 +2,7 @@
 
 ### AWS CLI Setup
 - Install and configure the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html): `aws configure`
-- _Optional_ - Create an AWS CLI profile:
+#### _Optional_ - Create an AWS CLI profile:
 - `nano ~/.aws/credentials`
 ```sh
 [profile-name]
@@ -17,7 +17,7 @@ output = json
 ```
 - `aws configure --profile profile-name`
 
-- _Optional_ - Configure SSO with IAM Identity Center authentication:
+#### _Optional_ - Configure SSO with IAM Identity Center authentication:
 ```sh
 [profile-name]
 sso_session = my-sso
