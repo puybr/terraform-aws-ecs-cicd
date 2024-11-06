@@ -19,7 +19,7 @@ output = json
 
 #### _Option 2_ - Configure SSO with IAM Identity Center authentication:
 ```sh
-[profile-name]
+[profile profile-name]
 sso_session = my-sso
 sso_account_id = 444455556666
 sso_role_name = readOnly
