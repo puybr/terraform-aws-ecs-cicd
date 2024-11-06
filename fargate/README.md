@@ -1,8 +1,6 @@
 # AWS Terraform
 
 ### AWS CLI Setup
-- Install and configure the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
-
 #### _Option 1_ - Add the AWS access secret keys directly to the provider block:
 ```sh
 # provider "aws" {
