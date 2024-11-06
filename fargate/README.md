@@ -25,6 +25,7 @@ aws_secret_access_key = [*****]
 region = eu-west-2
 output = json
 ```
+- Add the profile to the provider block:
 ```sh
 # provider "aws" {
     profile = "test"
