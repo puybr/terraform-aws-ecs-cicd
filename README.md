@@ -13,9 +13,8 @@
 - Generate the AWS CLI access keys in the IAM console or Identity Center (SSO)
 - Install and configure the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 - Configure the [Codestar Connection](https://docs.aws.amazon.com/codepipeline/latest/userguide/connections-github.html)
-- Clone the repository
-- Rename the repository folder to the application name: `mv <REPO> <APP>`
-- `cd <APP>/fargate/<MODULE>/`
+- Clone this repository
+- Fork the `nodejs-express-boilerplate` application repository
 
 
 
@@ -55,6 +54,7 @@ lb_listener_arn=""
 
 ### 🚀 How to run the module:
 ```sh
+cd fargate/<MODULE>/
 terraform init
 terraform plan
 terraform apply
