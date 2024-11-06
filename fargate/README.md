@@ -40,7 +40,7 @@ sso_region = eu-west-2
 sso_start_url = https://my-sso-portal.awsapps.com/start
 sso_registration_scopes = sso:account:access
 ```
-- `aws sso login --profile test` `aws sso logout --profile profile-name `
+- `aws sso login --profile profile-name` `aws sso logout --profile profile-name `
 
 ##### Add the profile value to the provider block:
 ```sh
