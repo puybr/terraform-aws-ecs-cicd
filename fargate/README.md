@@ -27,7 +27,7 @@ output = json
 ```
 ```sh
 # provider "aws" {
-    profile = "profile-name"
+    profile = "test"
 # }
 ```
 
