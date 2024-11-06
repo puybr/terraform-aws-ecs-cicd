@@ -2,6 +2,10 @@ variable "aws_region" {
   default = "eu-west-2"
 }
 
+variable "az_count" {
+  default = 1
+}
+
 variable "app_name" {
     description = "Name of the app"
     default = "nodejs-express"
