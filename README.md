@@ -9,7 +9,7 @@
 > ✏️ See the tutorial [here](./fargate/README.md)
 
 ### How to setup:
-- Create the IAM user and apply the required permissions for the role
+- Create the IAM user and apply the required permissions
 - Generate the AWS CLI access keys in the IAM console
 - Install and configure the AWS CLI
 - Configure the [Codestar Connection](https://docs.aws.amazon.com/codepipeline/latest/userguide/connections-github.html)
