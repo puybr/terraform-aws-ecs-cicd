@@ -25,7 +25,8 @@ output = json
 ```
 
 #### _Option 3_ - Configure a new profile with [IAM Identity Center](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html#sso-configure-profile-token-auto-sso) authentication:
-- `aws configure sso --profile profile-name `
+- `aws configure sso --profile profile-name`
+- `cat ~/.aws/config`
 ```sh
 [profile profile-name]
 sso_session = test-sso
@@ -39,7 +40,6 @@ sso_region = eu-west-2
 sso_start_url = https://my-sso-portal.awsapps.com/start
 sso_registration_scopes = sso:account:access
 ```
-- `cat ~/.aws/config`
 - `aws sso login --profile test` `aws sso logout --profile profile-name `
 
 ##### Add the profile value to the provider block:
