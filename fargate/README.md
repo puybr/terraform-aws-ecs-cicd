@@ -41,7 +41,8 @@ sso_registration_scopes = sso:account:access
 ```
 - `cat ~/.aws/config`
 - `aws sso login --profile test` `aws sso logout --profile test`
-- Add the profile value to the provider block:
+
+#### Add the profile value to the provider block:
 ```sh
 # provider "aws" {
     profile = "test"
