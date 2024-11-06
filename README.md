@@ -42,6 +42,7 @@ aws_region="eu-west-2"
 app_name="nodejs-express"
 app_port=3000
 app_count=1
+ecs_task_execution_role_name="ecsTaskExecutionRole"
 codestarconnection_arn=""
 lb_listener_arn=""
 ...
