@@ -16,7 +16,6 @@ resource "aws_iam_role" "codedeploy_role" {
   assume_role_policy = data.aws_iam_policy_document.assume_by_codedeploy.json
 }
 
-
 data "aws_iam_policy_document" "codedeploy_policy" {
   statement {
     sid    = "AllowLoadBalancingAndECSModifications"

@@ -6,7 +6,7 @@
 2. [ecs-infra](./fargate/ecs-infra)
 3. [cicd](./fargate/cicd)
 
-> ✏️ See the tutorial [here](./fargate/README.md)
+> ✏️ Check the tutorial [here](./fargate/README.md)
 
 ### How to setup:
 - Create the IAM user and apply the required permissions
