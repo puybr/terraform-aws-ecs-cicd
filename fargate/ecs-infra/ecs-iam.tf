@@ -18,7 +18,7 @@ resource "aws_iam_role" "ecs_task_execution_role" {
 
 data "aws_iam_policy_document" "ecs_policy" {
   statement {
-    sid    = ""
+    sid    = "SSMParameterStore"
     effect = "Allow"
 
     actions = [
@@ -29,7 +29,7 @@ data "aws_iam_policy_document" "ecs_policy" {
     resources = ["*"]
   }
   statement {
-    sid    = ""
+    sid    = "SecretsManager"
     effect = "Allow"
 
     actions = [
@@ -40,7 +40,7 @@ data "aws_iam_policy_document" "ecs_policy" {
     resources = ["*"]
   }
   statement {
-    sid    = ""
+    sid    = "Decryption"
     effect = "Allow"
 
     actions = [

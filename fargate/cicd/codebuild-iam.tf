@@ -19,7 +19,7 @@ resource "aws_iam_role" "codebuild_role" {
 
 data "aws_iam_policy_document" "codebuild_policy" {
   statement {
-    sid    = ""
+    sid    = "Logs"
     effect = "Allow"
 
     actions = [
@@ -31,7 +31,7 @@ data "aws_iam_policy_document" "codebuild_policy" {
     resources = ["*"]
   }
   statement {
-    sid    = ""
+    sid    = "s3Service"
     effect = "Allow"
 
     actions = [
@@ -45,7 +45,7 @@ data "aws_iam_policy_document" "codebuild_policy" {
     resources = ["*"]
   }
   statement {
-    sid    = ""
+    sid    = "ECR"
     effect = "Allow"
 
     actions = [
@@ -60,7 +60,7 @@ data "aws_iam_policy_document" "codebuild_policy" {
     resources = ["*"]
   }
 statement {
-    sid    = ""
+    sid    = "CodeArtifact"
     effect = "Allow"
 
     actions = [
@@ -88,7 +88,7 @@ statement {
     resources = ["*"]
   }
 statement {
-    sid    = ""
+    sid    = "SecretsManager"
     effect = "Allow"
 
     actions = [

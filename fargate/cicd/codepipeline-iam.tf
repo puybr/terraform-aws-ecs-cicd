@@ -19,7 +19,7 @@ resource "aws_iam_role" "codepipeline_role" {
 
 data "aws_iam_policy_document" "codepipeline_policy" {
   statement {
-    sid    = ""
+    sid    = "s3Service"
     effect = "Allow"
 
     actions = [
@@ -52,7 +52,7 @@ data "aws_iam_policy_document" "codepipeline_policy" {
     resources = ["${var.codestarconnection_arn}"]
   }
   statement {
-    sid    = ""
+    sid    = "CodeBuild"
     effect = "Allow"
 
     actions = [
@@ -63,7 +63,7 @@ data "aws_iam_policy_document" "codepipeline_policy" {
     resources = ["*"]
   }
   statement {
-    sid    = ""
+    sid    = "ECS"
     effect = "Allow"
 
     actions = [
@@ -73,7 +73,7 @@ data "aws_iam_policy_document" "codepipeline_policy" {
     resources = ["*"]
   }
     statement {
-    sid    = ""
+    sid    = "CodeDeploy"
     effect = "Allow"
 
     actions = [
