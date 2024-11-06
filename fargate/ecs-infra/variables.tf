@@ -49,11 +49,6 @@ variable "ecs_task_execution_role_name" {
     default = "ecsTaskExecutionRole"
 }
 
-variable "ecs_task_execution_policy_name" {
-    description = "ECS task execution policy name"
-    default = "ecsTaskExecutionPermissions"
-}
-
 variable "load_balancer_security_group_name" {
     default = "lb-sg"
 }

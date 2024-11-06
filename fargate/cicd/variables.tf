@@ -33,19 +33,9 @@ variable "codebuild_role" {
     default = "codeBuildRole" 
 }
 
-variable "codebuild_policy" {
-    type = string
-    default = "codeBuildPermissions" 
-}
-
 variable "codepipeline_role" {
     type = string
     default = "codePipelineRole" 
-}
-
-variable "codepipeline_policy" {
-    type = string
-    default = "codePipelinePermissions" 
 }
 
 variable "codedeploy_role" {
