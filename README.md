@@ -27,7 +27,7 @@
     profile = "profile-name"
 # }
 ```
-- _Option 2_ - Set the AWS environment variables in the terminal and omit the values from the provider:
+- _Option 2_ - Set the AWS environment variables in the terminal and omit the profile value from the provider:
 ```sh
 export AWS_ACCESS_KEY_ID=*****
 export AWS_SECRET_ACCESS_KEY=*****
