@@ -43,6 +43,7 @@ app_name="nodejs-express"
 app_port=3000
 app_count=1
 codestarconnection_arn=""
+lb_listener_arn=""
 ...
 ```
 - _Option 2_ - Set the default variables directly in the "`variables.tf`" file
