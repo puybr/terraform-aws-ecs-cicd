@@ -3,7 +3,6 @@
 ### AWS CLI Setup
 - Install and configure the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 #### _Option 1_ - Create a new AWS CLI profile and add the keys:
-- `aws configure --profile test`
 - `nano ~/.aws/credentials`
 ```sh
 [test]
@@ -16,6 +15,7 @@ aws_secret_access_key = [*****]
 region = eu-west-2
 output = json
 ```
+- `aws configure --profile test`
 
 #### _Option 2_ - Configure SSO with IAM Identity Center authentication:
 - `aws configure sso --profile test`
