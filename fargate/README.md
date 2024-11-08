@@ -141,7 +141,7 @@ module "ecs-infra" {
   # path of the child module 
   source = "./modules/ecs-infra"
   # variables
-  environment = "dev"
+  environment = "temp"
 }
 ```
 
