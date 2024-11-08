@@ -181,11 +181,14 @@ environment="dev"
 ```tf
 terraform plan -var environment="dev"
 ```
+
+
 ### Apply the module
 - `terraform apply`
 - `terraform apply -var environment="dev"`
 
-### Destroy the module
+
+### <span style="color: red;">Destroy the module</span>
 - `terraform destroy`
 
 
