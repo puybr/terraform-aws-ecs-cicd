@@ -133,6 +133,24 @@ $ tree
 ├── terraform.tfvars
 └── variables.tf
 ```
+
+[Module Blocks](https://developer.hashicorp.com/terraform/language/modules/syntax):
+- Add the root module block to the "`main.tf`" file:
+```sh
+module "ecs-infra" {
+  # path of the child module 
+  source = "./modules/ecs-infra"
+  # variables
+  environment = "dev"
+}
+```
+
+#### Manage multiple environments
+1. Terraform Workspaces
+2. [Terragrunt](https://terragrunt.gruntwork.io/) (_3rd party thin wrapper on top of Terraform_)
+3. [Separate modules in a directory structure](https://developer.hashicorp.com/terraform/tutorials/modules/organize-configuration) (_one Git branch_)
+4. Git branch per environment
+
 Separate Module Structure:
 ```
 $ tree
@@ -151,23 +169,6 @@ $ tree
     ├── terraform.tfstate
     └── terraform.tfvars
 ```
-
-[Module Blocks](https://developer.hashicorp.com/terraform/language/modules/syntax):
-- Add the root module block to the "`main.tf`" file:
-```sh
-module "ecs-infra" {
-  # path of the child module 
-  source = "./modules/ecs-infra"
-  # variables
-  environment = "dev"
-}
-```
-
-#### Manage multiple environments
-1. Terraform Workspaces
-2. [Terragrunt](https://terragrunt.gruntwork.io/) (_3rd party thin wrapper on top of Terraform_)
-3. [Separate modules in a directory structure](https://developer.hashicorp.com/terraform/tutorials/modules/organize-configuration) (_one Git branch_)
-4. Git branch per environment
 
 ### Initialize and plan the module
 - Initialize the Terrform module in the root module directory:
