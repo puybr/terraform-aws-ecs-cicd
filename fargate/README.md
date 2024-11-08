@@ -126,16 +126,16 @@ $ tree
 - Add a module block to the "`main.tf`" file in the root module:
 ```sh
 module "ecs-infra" {
-  # path of the child module 
+  # Path of the child module 
   source = "./modules/ecs-infra"
-  # variables
+  # Variables
   environment = "temp"
 }
 
 # Outputs
 output "lb_listener_arn" {
   description = "ARN of the LB listener"
-  value       = module.ecs-infra.lb_listener_arn
+  value = module.ecs-infra.lb_listener_arn
 }
 ```
 
