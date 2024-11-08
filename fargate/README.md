@@ -11,13 +11,13 @@
 
 #### _Option 2_ - Configure a new AWS CLI profile:
 - `aws configure --profile profile-name`
-- `cat ~/.aws/credentials`
+- `~/.aws/credentials`
 ```sh
 [profile-name]
 aws_access_key_id = [*****]
 aws_secret_access_key = [*****]
 ```
-- `cat ~/.aws/config`
+- `~/.aws/config`
 ```
 [profile-name]
 region = eu-west-2
@@ -26,7 +26,7 @@ output = json
 
 #### _Option 3_ - Configure a new profile with [IAM Identity Center](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html#sso-configure-profile-token-auto-sso) authentication (SSO):
 - `aws configure sso --profile profile-name`
-- `cat ~/.aws/config`
+- `~/.aws/config`
 ```sh
 [profile profile-name]
 sso_session = test-sso
