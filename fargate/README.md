@@ -188,7 +188,8 @@ terraform plan -var environment="dev"
 - `terraform apply -var environment="dev"`
 
 
-### <span style="color: red;">Destroy the module</span>
+### Destroy the module
+- <span style="color: red;">Destroy the module</span>
 - `terraform destroy`
 
 
