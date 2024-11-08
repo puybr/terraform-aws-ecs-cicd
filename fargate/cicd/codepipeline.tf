@@ -19,7 +19,7 @@ resource "aws_codepipeline" "codepipeline" {
             namespace        = "SourceVariables"
             run_order        = 1
             configuration = {
-                ConnectionArn    = "${var.codestarconnection_arn}"
+                ConnectionArn    = "${var.codestar_connection_arn}"
                 FullRepositoryId = "${var.repo_owner}/${var.repo_name}"
                 BranchName       = var.app_name
                 DetectChanges    = true
