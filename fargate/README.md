@@ -143,6 +143,12 @@ module "ecs-infra" {
   # variables
   environment = "temp"
 }
+
+# Outputs
+output "lb_listener_arn" {
+  description = "ARN of the LB listerner"
+  value       = module.ecs-infra.lb_listener_arn
+}
 ```
 
 #### Manage multiple environments
