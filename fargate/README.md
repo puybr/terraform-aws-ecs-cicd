@@ -189,7 +189,6 @@ terraform plan -var environment="dev"
 
 
 ### Destroy the module
-- <span style="color: red;">Destroy the module</span>
 - `terraform destroy`
 
 
@@ -238,6 +237,9 @@ terraform state list
 ```
 - Migrate the Terraform state file from one backend to another:
 `terraform init -migrate-state`
+
+
+
 ## Terraform Workspaces
 - Terraform starts with a single "`default`" workspace that cannot be deleted:
 ```sh
