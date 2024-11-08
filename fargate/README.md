@@ -58,8 +58,7 @@ sso_registration_scopes = sso:account:access
 `terraform -version`
 
 #### _Example_ - Create a monolithic module
-- `mkdir ecs-infra`
-- `cd ecs-infra`
+- `mkdir ecs-infra && cd ecs-infra`
 - Create the "`terraform.tf`" file in the `ecs-infra` directory
 - Add the required AWS terraform providers block to the "`terraform.tf`" file:
 ```tf
