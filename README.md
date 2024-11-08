@@ -35,20 +35,7 @@ export AWS_SESSION_TOKEN=*****
 
 
 #### Set the variables
-- _Option 1_ - Add a "`terraform.tfvars`" file in each module directory:
-```sh
-aws_region="eu-west-2"
-az_count=1
-app_name="nodejs-express"
-app_port=3000
-app_count=1
-fargate_cpu=256
-fargate_memory=512
-ecs_task_execution_role_name="ecsTaskExecutionRole"
-codestarconnection_arn=""
-lb_listener_arn=""
-...
-```
+- _Option 1_ - Add a "`terraform.tfvars`" file in each module directory
 - _Option 2_ - Set the default variables directly in the "`variables.tf`" file
 
 
