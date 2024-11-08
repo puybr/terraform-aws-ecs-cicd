@@ -48,7 +48,7 @@ variable "ecs_task_execution_role" {
     default = "ecsTaskExecutionRole"
 }
 
-variable "codestarconnection_arn" {
+variable "codestar_connection_arn" {
   type = string
   default = ""
 }
