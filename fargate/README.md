@@ -146,7 +146,7 @@ module "ecs-infra" {
 
 # Outputs
 output "lb_listener_arn" {
-  description = "ARN of the LB listerner"
+  description = "ARN of the LB listener"
   value       = module.ecs-infra.lb_listener_arn
 }
 ```
