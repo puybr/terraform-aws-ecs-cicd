@@ -54,7 +54,6 @@ lb_listener_arn=""
 
 ### 🚀 How to run the module:
 ```sh
-cd fargate/<MODULE>/
 terraform init
 terraform plan
 terraform apply
