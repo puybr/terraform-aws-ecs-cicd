@@ -194,11 +194,11 @@ environment="dev"
 terraform plan -var environment="dev"
 ```
 ### Apply the module
-`terraform apply`
-`terraform apply -var environment="dev"`
+- `terraform apply`
+- `terraform apply -var environment="dev"`
 
 ### Destroy the module
-`terraform destroy`
+- `terraform destroy`
 
 
 ## Terraform Variables
