@@ -151,7 +151,7 @@ output "lb_listener_arn" {
 }
 ```
 
-#### Manage multiple environments
+### Manage multiple environments
 1. Terraform Workspaces
 2. [Terragrunt](https://terragrunt.gruntwork.io/) (_3rd party thin wrapper on top of Terraform_)
 3. [Separate modules in a directory structure](https://developer.hashicorp.com/terraform/tutorials/modules/organize-configuration) (_one Git branch_)
