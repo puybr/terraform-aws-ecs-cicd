@@ -48,7 +48,7 @@ data "aws_iam_policy_document" "codepipeline_policy" {
 
     actions = ["codestar-connections:UseConnection"]
 
-    resources = ["${var.codestarconnection_arn}"]
+    resources = ["${var.codestar_connection_arn}"]
   }
   statement {
     sid    = "CodeBuild"
