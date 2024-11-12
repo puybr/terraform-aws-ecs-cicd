@@ -59,8 +59,8 @@ sso_registration_scopes = sso:account:access
 
 #### _Example_ - Create a monolithic module
 - `mkdir ecs-infra && cd ecs-infra`
-- Create the "`terraform.tf`" file in the "`ecs-infra`" directory
-- Add the required AWS terraform providers block to the "`terraform.tf`" file:
+- Create the "`main.tf`" file in the "`ecs-infra`" directory
+- Add the required AWS terraform providers block to the "`main.tf`" file:
 ```tf
 terraform {
   required_providers {
@@ -71,7 +71,7 @@ terraform {
   }
 }
 ```
-Create the "`main.tf`" file:
+Add the provider block to the "`main.tf`" file:
 ```tf
 # Configure the AWS Provider
 provider "aws" {
@@ -116,7 +116,6 @@ $ tree
 .
 ├── ecs.tf
 ├── main.tf
-├── terraform.tf
 ├── terraform.tfstate
 ├── terraform.tfvars
 └── variables.tf
@@ -151,7 +150,6 @@ $ tree
 .
 ├── ecs-infra
 │   ├── ecs.tf
-│   ├── terraform.tf
 ├── prod
 │   ├── main.tf
 │   ├── variables.tf
