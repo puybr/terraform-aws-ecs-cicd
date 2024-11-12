@@ -59,34 +59,6 @@ data "aws_iam_policy_document" "codebuild_policy" {
     resources = ["*"]
   }
 statement {
-    sid    = "CodeArtifact"
-    effect = "Allow"
-
-    actions = [
-      "codeartifact:GetAuthorizationToken",
-      "codeartifact:GetRepositoryEndpoint",
-      "codeartifact:ReadFromRepository",
-      "codeartifact:PublishPackageVersion",
-      "codeartifact:PutPackageMetadata"
-    ]
-
-    resources = ["*"]
-  }
-  statement {
-    sid    = ""
-    effect = "Allow"
-
-    actions = [
-      "sts:GetServiceBearerToken"
-    ]
-    condition {
-      test     = "ForAnyValue:StringEquals"
-      variable = "sts:AWSServiceName"
-      values   = ["codeartifact.amazonaws.com"]
-    }
-    resources = ["*"]
-  }
-statement {
     sid    = "SecretsManager"
     effect = "Allow"
 
