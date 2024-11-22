@@ -76,5 +76,5 @@ terraform apply
 - [ ] Add a root module and connect the child  module outputs in module blocks
 - [ ] Refactor the monolithic Terraform configuration into environments
 - [ ] Migrate the local state to a remote S3 backend
-- [ ] Terraform CI/CD (one-click deployments)
+- [ ] [Terraform CI/CD](https://gallery.ecr.aws/hashicorp/terraform) (one-click deployments)
 - [ ] Lock the [provider version](https://developer.hashicorp.com/terraform/tutorials/configuration-language/provider-versioning)
