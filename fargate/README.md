@@ -167,6 +167,7 @@ $ tree
 `terraform init`
 - Validate the configuration files:
 `terraform validate`
+- Rewrite configuration files to a canonical format and style: `terraform fmt`
 - Plan the changes:
 `terraform plan`
 
