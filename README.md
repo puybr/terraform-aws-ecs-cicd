@@ -75,7 +75,7 @@ terraform apply
 ### ✅️ To-do
 - [ ] Add a root module and connect the child  module outputs in [module blocks](https://developer.hashicorp.com/terraform/language/modules/syntax)
 - [ ] [Configure default tags for AWS resources](https://developer.hashicorp.com/terraform/tutorials/aws/aws-default-tags)
-- [ ] _Optional:_ [Refactor the monolithic Terraform configuration](https://developer.hashicorp.com/terraform/tutorials/modules/organize-configuration) into environments
+- [ ] _Optional:_ _[Refactor the monolithic Terraform configuration](https://developer.hashicorp.com/terraform/tutorials/modules/organize-configuration) into environments_
 - [ ] Migrate the local state to a [remote S3 backend](https://developer.hashicorp.com/terraform/language/backend/s3)
 - [ ] Configure CI/CD for Terraform using the [hashicorp/terraform](https://gallery.ecr.aws/hashicorp/terraform) prebuilt image (one-click deployments)
 - [ ] Lock the [provider version](https://developer.hashicorp.com/terraform/tutorials/configuration-language/provider-versioning)
