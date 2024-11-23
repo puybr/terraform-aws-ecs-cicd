@@ -14,7 +14,7 @@
 - Install and configure the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 - Configure the [Codestar Connection](https://docs.aws.amazon.com/codepipeline/latest/userguide/connections-github.html)
 - Clone this repository
-- Fork the `nodejs-express-boilerplate` application repository
+- Fork the `[nodejs-express-boilerplate](https://github.com/puybr)` application repository
 
 
 
