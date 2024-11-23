@@ -6,7 +6,7 @@
 2. [ecs-infra](./fargate/ecs-infra)
 3. [codepipeline](./fargate/codepipeline)
 
-> ✏️ Check the tutorial [here](./fargate/README.md) and the learning path [here](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-study-003)
+> ✏️ Check out the tutorial [here](./fargate/README.md) and the learning path [here](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-study-003)
 
 ### How to setup:
 - Create the IAM user and apply the required permissions
