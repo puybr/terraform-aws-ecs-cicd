@@ -62,7 +62,7 @@ data "aws_iam_policy_document" "codedeploy_policy" {
       "codedeploy:CreateDeployment",
       "codedeploy:GetDeployment",
       "codedeploy:GetDeploymentConfig",
-      "codedeploy:RegisterApplicationRevision"]
+    "codedeploy:RegisterApplicationRevision"]
 
     resources = ["*"]
   }

@@ -58,7 +58,7 @@ data "aws_iam_policy_document" "codebuild_policy" {
 
     resources = ["*"]
   }
-statement {
+  statement {
     sid    = "SecretsManager"
     effect = "Allow"
 

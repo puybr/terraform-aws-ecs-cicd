@@ -35,7 +35,7 @@ data "aws_iam_policy_document" "ecs_policy" {
     actions = [
       "secretsmanager:GetSecretValue",
       "secretsmanager:DescribeSecret"
-      ]
+    ]
 
     resources = ["*"]
   }
@@ -45,7 +45,7 @@ data "aws_iam_policy_document" "ecs_policy" {
 
     actions = [
       "kms:Decrypt"
-      ]
+    ]
 
     resources = ["*"]
   }

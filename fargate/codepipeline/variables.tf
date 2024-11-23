@@ -3,13 +3,13 @@ variable "aws_region" {
 }
 
 variable "app_name" {
-    description = "Name of the app"
-    default = "nodejs-express"
+  description = "Name of the app"
+  default     = "nodejs-express"
 }
 
 variable "app_port" {
-    description = "Port exposed by the docker image to redirect traffic to"
-    default = 3000
+  description = "Port exposed by the docker image to redirect traffic to"
+  default     = 3000
 }
 
 variable "ecs_cluster_name" {
@@ -29,31 +29,31 @@ variable "repo_branch" {
 }
 
 variable "codebuild_role" {
-    type = string
-    default = "codeBuildRole" 
+  type    = string
+  default = "codeBuildRole"
 }
 
 variable "codepipeline_role" {
-    type = string
-    default = "codePipelineRole" 
+  type    = string
+  default = "codePipelineRole"
 }
 
 variable "codedeploy_role" {
-    type = string
-    default = "codeDeployRole" 
+  type    = string
+  default = "codeDeployRole"
 }
 
 variable "ecs_task_execution_role" {
-    type = string
-    default = "ecsTaskExecutionRole"
+  type    = string
+  default = "ecsTaskExecutionRole"
 }
 
 variable "codestar_connection_arn" {
-  type = string
+  type    = string
   default = ""
 }
 
 variable "lb_listener_arn" {
-    type = string
-    default = "" 
+  type    = string
+  default = ""
 }

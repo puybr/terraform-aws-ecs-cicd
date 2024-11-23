@@ -38,7 +38,7 @@ data "aws_iam_policy_document" "codepipeline_policy" {
     actions = [
       "iam:PassRole",
       "iam:GetRole"
-      ]
+    ]
 
     resources = ["*"]
   }
@@ -57,7 +57,7 @@ data "aws_iam_policy_document" "codepipeline_policy" {
     actions = [
       "codebuild:BatchGetBuilds",
       "codebuild:StartBuild"
-      ]
+    ]
 
     resources = ["*"]
   }
@@ -67,11 +67,11 @@ data "aws_iam_policy_document" "codepipeline_policy" {
 
     actions = [
       "ecs:RegisterTaskDefinition"
-      ]
+    ]
 
     resources = ["*"]
   }
-    statement {
+  statement {
     sid    = "CodeDeploy"
     effect = "Allow"
 
@@ -82,7 +82,7 @@ data "aws_iam_policy_document" "codepipeline_policy" {
       "codedeploy:GetDeployment",
       "codedeploy:GetDeploymentConfig",
       "codedeploy:RegisterApplicationRevision"
-      ]
+    ]
 
     resources = ["*"]
   }
