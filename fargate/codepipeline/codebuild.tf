@@ -17,10 +17,6 @@ resource "aws_codebuild_project" "codebuild_project_build_stage" {
       value = local.account_id
     }
     environment_variable {
-      name  = "AWS_DEFAULT_REGION"
-      value = var.aws_region
-    }
-    environment_variable {
       name  = "APPLICATION_NAME"
       value = var.app_name
     }
