@@ -193,7 +193,7 @@ terraform plan -var environment="dev"
 
 ## Terraform Variables
 - Terraform will automatically load any files with "`*.auto.tfvars`" and "`terraform.tfvars`"
-- The "`variable.tf`" file needs to have all the variables declared which can have a default value or not
+- The "`variables.tf`" file needs to have all the variables declared which can have a default value or not
 - The "`.tfvars`" file is one way of associating variables to an environment
 - Conditionally assign values to different parameters based on the variables:
 ```tf
