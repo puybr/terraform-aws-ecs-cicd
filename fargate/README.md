@@ -150,6 +150,7 @@ $ tree
 .
 ├── ecs-infra
 │   ├── ecs.tf
+│   ├── variables.tf
 ├── prod
 │   ├── main.tf
 │   ├── variables.tf
