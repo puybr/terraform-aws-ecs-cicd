@@ -126,9 +126,9 @@ $ tree
 ```sh
 module "ecs-infra" {
   # Path of the child module 
-  source = "./modules/ecs-infra"
+  source = "../ecs-infra"
   # Variables
-  environment = "temp"
+  environment = var.environment
 }
 
 # Outputs
