@@ -168,7 +168,7 @@ $ tree
 ### Initialize and plan the module
 - Initialize the Terrform module in the root module directory:
 `terraform init`
-- Rewrite configuration files to a canonical format and style: `terraform fmt`
+- Rewrite configuration files to a canonical format and style: `terraform fmt [-recursive]`
 - Validate the configuration files:
 `terraform validate`
 - Plan the changes:
