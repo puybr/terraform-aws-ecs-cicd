@@ -78,7 +78,7 @@ Add the provider block to the "`main.tf`" file:
 # Configure the AWS Provider
 provider "aws" {
   region = var.aws_region
-  profile = "profile-name"
+  profile = "profile-name"    <--- optional
 }
 ```
 Create the "`variables.tf`" file:
@@ -233,7 +233,7 @@ terraform state list
     region             = "eu-west-2"
     dynamodb_table     = "components_tf_lockid"
     encrypt            = true
-    profile            = "profile-name"
+    profile            = "profile-name"   <--- optional
     }
 # }
 ```
