@@ -19,7 +19,7 @@ aws_secret_access_key = [*****]
 ```
 ```sh
 # ~/.aws/config
-[profile-name]
+[profile profile-name]
 region = eu-west-2
 output = json
 ```
