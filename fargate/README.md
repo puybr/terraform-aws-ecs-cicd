@@ -9,7 +9,14 @@
 # }
 ```
 
-#### _Option 2_ - Configure a new AWS CLI profile:
+- _Option 2_ - Set the AWS environment variables in the terminal and omit the profile value from the provider:
+```sh
+export AWS_ACCESS_KEY_ID=*****
+export AWS_SECRET_ACCESS_KEY=*****
+export AWS_SESSION_TOKEN=*****
+```
+
+#### _Option 3_ - Configure a new AWS CLI profile:
 - `aws configure --profile profile-name`
 ```sh
 # ~/.aws/credentials
@@ -24,7 +31,7 @@ region = eu-west-2
 output = json
 ```
 
-#### _Option 3_ - Configure a new profile with [IAM Identity Center](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html#sso-configure-profile-token-auto-sso) authentication (SSO):
+#### _Option 4_ - Configure a new profile with [IAM Identity Center](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html#sso-configure-profile-token-auto-sso) authentication (SSO):
 - `aws configure sso --profile profile-name`
 ```sh
 # ~/.aws/config
@@ -50,7 +57,7 @@ sso_registration_scopes = sso:account:access
 # }
 ```
 
-#### _Option 4_ -  Use the `[default]` profile and omit the profile value from the provider
+#### _Option 5_ -  Use the `[default]` profile and omit the profile value from the provider
 
 ### Terraform Local Setup
 - Install [Chocolatey](https://chocolatey.org/install)
