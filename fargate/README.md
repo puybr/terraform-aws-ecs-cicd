@@ -50,6 +50,8 @@ sso_registration_scopes = sso:account:access
 # }
 ```
 
+#### _Option 4_ -  Use the `[default]` profile and omit the profile value from the provider
+
 ### Terraform Local Setup
 - Install [Chocolatey](https://chocolatey.org/install)
 - Install Terraform:
