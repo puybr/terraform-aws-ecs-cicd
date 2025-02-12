@@ -20,7 +20,7 @@
 
 #### Modify the AWS provider block
 - Located in the "`main.tf`" file in each module
-- _Option 1_ - Configure an additional AWS CLI profile:
+- Configure an additional AWS CLI profile:
 - `aws configure --profile profile-name`
 - `aws configure sso --profile profile-name`
 ```sh
@@ -29,14 +29,6 @@
 # }
 ```
 - Or use the `[default]` AWS CLI profile
-
-- _Option 2_ - Set the AWS environment variables in the terminal and omit the profile value from the provider:
-```sh
-export AWS_ACCESS_KEY_ID=*****
-export AWS_SECRET_ACCESS_KEY=*****
-export AWS_SESSION_TOKEN=*****
-```
-
 
 #### Set the variables
 - _Option 1_ - Add a "`terraform.tfvars`" file in each module directory
