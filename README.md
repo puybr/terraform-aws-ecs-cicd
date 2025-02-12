@@ -25,9 +25,11 @@
 - `aws configure sso --profile profile-name`
 ```sh
 # provider "aws" {
-    profile = "profile-name"
+    profile = "profile-name"   <--- optional
 # }
 ```
+- Or use the `[default]` AWS CLI profile
+
 - _Option 2_ - Set the AWS environment variables in the terminal and omit the profile value from the provider:
 ```sh
 export AWS_ACCESS_KEY_ID=*****
