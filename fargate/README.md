@@ -247,7 +247,16 @@ terraform state list
 - Migrate the Terraform state file from one backend to another:
 `terraform init -migrate-state`
 
+- [Move](https://developer.hashicorp.com/terraform/cli/commands/state/mv) the Terraform state:
+```sh
+#!/bin/bash
+set -eo pipefail
 
+source=$1
+dest=$2
+
+terraform state mv module.ecs.aws_ecs_service.main[\"$1\"] module.ecs.aws_ecs_service.main[\"$2\"]
+```
 
 ## Terraform Workspaces
 - Terraform starts with a single "`default`" workspace that cannot be deleted:
