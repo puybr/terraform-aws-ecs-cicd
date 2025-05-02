@@ -41,7 +41,6 @@ sso_account_id = 444455556666
 sso_role_name = roleName
 region = eu-west-2
 output = json
-
 [sso-session test-sso]
 sso_region = eu-west-2
 sso_start_url = https://my-sso-portal.awsapps.com/start
