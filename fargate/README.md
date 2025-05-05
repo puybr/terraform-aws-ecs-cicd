@@ -246,7 +246,7 @@ terraform state list
 - Migrate the Terraform state file from one backend to another:
 `terraform init -migrate-state`
 
-- [Move](https://developer.hashicorp.com/terraform/cli/commands/state/mv) the Terraform state:
+- [Move](https://developer.hashicorp.com/terraform/cli/commands/state/mv)/Rename the Terraform state:
 ```sh
 #!/bin/bash
 set -eo pipefail
@@ -254,7 +254,7 @@ set -eo pipefail
 source=$1
 dest=$2
 
-terraform state mv module.ecs.aws_ecs_service.main[\"$1\"] module.ecs.aws_ecs_service.main[\"$2\"]
+terraform state mv module.ecs.aws_ecs_service.example[\"$1\"] module.ecs.aws_ecs_service.example[\"$2\"]
 ```
 
 ## Terraform Workspaces
