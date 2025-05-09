@@ -246,7 +246,12 @@ terraform state list
 - Migrate the Terraform state file from one backend to another:
 `terraform init -migrate-state`
 
-- [Move](https://developer.hashicorp.com/terraform/cli/commands/state/mv)/Rename the Terraform state:
+- [Move/rename](https://developer.hashicorp.com/terraform/cli/commands/state/mv) the Terraform state:
+- Example:
+    - `terraform state mv -dry-run module.ecs.aws_security_group.example1 module.ecs.aws_security_group.example2`
+- Rename the source module to the destination module:
+    - `terraform state mv -dry-run module.source module.destination`
+- Bulk move/rename:
 ```sh
 #!/bin/bash
 set -eo pipefail
