@@ -247,20 +247,18 @@ terraform state list
 `terraform init -migrate-state`
 
 - [Move/rename](https://developer.hashicorp.com/terraform/cli/commands/state/mv) the Terraform state:
-- Example:
-    - `terraform state mv -dry-run module.ecs.aws_security_group.example1 module.ecs.aws_security_group.example2`
-- Rename the source module to the destination module:
+    - `terraform state mv -dry-run module.ecs.aws_security_group.source module.ecs.aws_security_group.destination`
     - `terraform state mv -dry-run module.source module.destination`
 - Bulk move/rename:
-```sh
-#!/bin/bash
-set -eo pipefail
-
-source=$1
-dest=$2
-
-terraform state mv module.ecs.aws_ecs_service.example[\"$1\"] module.ecs.aws_ecs_service.example[\"$2\"]
-```
+    ```sh
+    #!/bin/bash
+    set -eo pipefail
+    
+    source=$1
+    dest=$2
+    
+    terraform state mv module.ecs.aws_ecs_service.example[\"$1\"] module.ecs.aws_ecs_service.example[\"$2\"]
+    ```
 
 ## Terraform Workspaces
 - Terraform starts with a single "`default`" workspace that cannot be deleted:
