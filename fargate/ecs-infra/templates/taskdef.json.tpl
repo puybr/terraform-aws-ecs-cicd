@@ -3,8 +3,6 @@
       "essential": true,
       "name": "${app_name}",
       "image": "${app_image}",
-      "cpu": ${fargate_cpu},
-      "memory": ${fargate_memory},
       "networkMode": "awsvpc",
       "portMappings": [
           {
