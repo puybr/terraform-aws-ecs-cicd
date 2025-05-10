@@ -9,8 +9,6 @@ data "template_file" "app" {
     app_name       = var.app_name
     app_port       = var.app_port
     region         = var.aws_region
-    fargate_cpu    = var.fargate_cpu
-    fargate_memory = var.fargate_memory
     app_image      = "${local.account_id}.dkr.ecr.${var.aws_region}.amazonaws.com/${var.app_name}:${var.image_tag}"
   }
 }
