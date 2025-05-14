@@ -244,7 +244,7 @@ terraform state list
 # }
 ```
 - Pull the remote state: `terraform state pull`
-- Make a backup of the state
+- Make a backup of the state file
 - Copy the state over to the new location
 - Migrate the Terraform state file from one backend to another:
 `terraform init -migrate-state`
