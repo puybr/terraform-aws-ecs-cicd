@@ -243,6 +243,8 @@ terraform state list
     }
 # }
 ```
+
+### State Manipulation
 - Pull the remote state: `terraform state pull`
 - Make a backup of the state file
 - Copy the state over to the new location
