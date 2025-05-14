@@ -243,6 +243,8 @@ terraform state list
     }
 # }
 ```
+- Pull the remote state: `terraform state pull`
+- Copy the state over to the new location
 - Migrate the Terraform state file from one backend to another:
 `terraform init -migrate-state`
 - [Move/rename](https://developer.hashicorp.com/terraform/cli/commands/state/mv) the Terraform state:
