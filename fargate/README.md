@@ -247,6 +247,7 @@ terraform state list
 - Copy the state over to the new location
 - Migrate the Terraform state file from one backend to another:
 `terraform init -migrate-state`
+- [Remove](https://developer.hashicorp.com/terraform/cli/commands/state/rm) remote state objects: `terraform state rm`
 - [Move/rename](https://developer.hashicorp.com/terraform/cli/commands/state/mv) the Terraform state:
     - `terraform state mv -dry-run module.source module.destination`
     - `terraform state mv -dry-run module.ecs.aws_security_group.source module.ecs.aws_security_group.destination`
