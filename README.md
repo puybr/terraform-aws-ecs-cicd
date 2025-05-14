@@ -1,4 +1,4 @@
-# 🚜 AWS Docker Infrastructure-as-Code
+# 🚜 AWS ECS Infrastructure-as-Code
 
 
 ### Terraform Modules:
