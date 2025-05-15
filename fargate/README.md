@@ -224,9 +224,13 @@ terraform apply -var-file="dev.tfvars"
 ## Terraform State
 - Terraform uses state data to remember which object corresponds to each resource in the configuration
 - The state is stored in the default "`terraform.tfstate`" file
-- List the local Terraform state:
+- List the Terraform state:
 ```sh
 terraform state list
+```
+- [Show](https://developer.hashicorp.com/terraform/cli/commands/state/show) the Terraform state:
+```sh
+terraform state show 'module.ecs.aws_ecs_service.example[\"<app>\"]'
 ```
 - The remote Terraform state is stored in the [S3 bucket backend](https://developer.hashicorp.com/terraform/language/backend/s3)
 - The DynamoDB table supports state locking, consistency checking and can configure multiple remote state files
