@@ -128,6 +128,10 @@ $ tree
 ├── terraform.tfvars
 └── variables.tf
 ```
+Module Creation:
+- Module creation - [recommended pattern](https://developer.hashicorp.com/terraform/tutorials/modules/pattern-module-creation)
+- [Standard module structure](https://developer.hashicorp.com/terraform/language/modules/develop/structure)
+- [Module composition](https://developer.hashicorp.com/terraform/language/modules/develop/composition)
 
 [Module Blocks](https://developer.hashicorp.com/terraform/language/modules/syntax):
 - Add a module block to the "`main.tf`" file in the root module:
