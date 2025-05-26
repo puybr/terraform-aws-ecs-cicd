@@ -274,7 +274,8 @@ terraform state show 'module.ecs.aws_ecs_service.example[\"<app>\"]'
         
         terraform state mv module.ecs.aws_ecs_service.example[\"$1\"] module.ecs.aws_ecs_service.example[\"$2\"]
         ```
-- [Import](https://developer.hashicorp.com/terraform/cli/import) existing resources
+- [Import](https://developer.hashicorp.com/terraform/cli/import) existing resources:
+   - `terraform import module.network.aws_ecs_cluster.main test`
 
 ## Terraform Workspaces
 - Terraform starts with a single "`default`" workspace that cannot be deleted:
