@@ -258,7 +258,7 @@ terraform state show 'module.ecs.aws_ecs_service.example[\"<app>\"]'
 # terraform {
     backend "s3" {
     bucket             = "components-tfstate"
-    key                = "state/terraform.tfstate"
+    key                = "state/components.tfstate"
     region             = "eu-west-2"
     dynamodb_table     = "components_tf_lockid"
     encrypt            = true
