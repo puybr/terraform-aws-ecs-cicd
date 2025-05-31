@@ -151,7 +151,7 @@ output "lb_listener_arn" {
 }
 ```
 
-[Data Sources](https://developer.hashicorp.com/terraform/language/data-sources)
+[Data Sources](https://developer.hashicorp.com/terraform/language/data-sources):
 - A data block requests that Terraform read from a given data source and exports the result under the given local name:
 ```sh
 # get listener from listener arn
