@@ -151,6 +151,31 @@ output "lb_listener_arn" {
 }
 ```
 
+[Data Sources](https://developer.hashicorp.com/terraform/language/data-sources)
+- A data block requests that Terraform read from a given data source and exports the result under the given local name:
+```sh
+# get listener from listener arn
+
+variable "listener_arn" {
+  type = string
+}
+
+data "aws_lb_listener" "listener" {
+  arn = var.listener_arn
+}
+
+# get listener from load_balancer_arn and port
+
+data "aws_lb" "selected" {
+  name = "default-public"
+}
+
+data "aws_lb_listener" "selected443" {
+  load_balancer_arn = data.aws_lb.selected.arn
+  port              = 443
+}
+```
+
 ### Manage multiple environments
 1. Terraform Workspaces
 2. [Terragrunt](https://terragrunt.gruntwork.io/) (_3rd party thin wrapper on top of Terraform_)
