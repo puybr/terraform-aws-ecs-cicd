@@ -155,7 +155,6 @@ output "lb_listener_arn" {
 - A data block requests that Terraform read from a given data source and exports the result under the given local name:
 ```sh
 # get listener from load_balancer_arn and port
-
 data "aws_lb" "selected" {
   name = "default-public"
 }
