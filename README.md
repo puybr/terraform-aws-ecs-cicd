@@ -1,4 +1,4 @@
-# 🚜 AWS ECS Infrastructure-as-Code
+# 🚜 AWS ECS and CodePipeline Infrastructure-as-Code
 
 
 ### Terraform Modules:
