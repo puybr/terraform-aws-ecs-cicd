@@ -32,7 +32,7 @@
 
 #### Set the variables
 - _Option 1_ - Add a "`terraform.tfvars`" file in each module directory
-- _Option 2_ - Set the default variables directly in the "`variables.tf`" file
+- _Option 2_ - Set the default variables directly in the module block in the "`main.tf`" file
 
 
 ### 🚀 How to run the module:
