@@ -2,9 +2,12 @@
 
 
 ### Terraform Modules:
-1. [ecr-infra](./fargate/ecr-infra)
-2. [ecs-infra](./fargate/ecs-infra)
-3. [codepipeline](./fargate/codepipeline)
+1. [apps](./modules/apps)
+2. [cicd](./modules/cicd)
+3. [network](./modules/network)
+4. [repos](./modules/repos)
+5. [routing](./modules/routing)
+6. [security](./modules/security)
 
 > ✏️ Check out the tutorial [here](./modules/README.md)
 
