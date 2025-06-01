@@ -2,10 +2,10 @@
 
 
 ### Terraform Modules:
-1. [apps](./modules/apps)
+1. [app](./modules/app)
 2. [cicd](./modules/cicd)
 3. [network](./modules/network)
-4. [repos](./modules/repos)
+4. [repo](./modules/repo)
 5. [routing](./modules/routing)
 6. [security](./modules/security)
 
