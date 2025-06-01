@@ -6,7 +6,7 @@
 2. [ecs-infra](./fargate/ecs-infra)
 3. [codepipeline](./fargate/codepipeline)
 
-> ✏️ Check out the tutorial [here](./fargate/README.md)
+> ✏️ Check out the tutorial [here](./modules/README.md)
 
 ### How to setup:
 - Create the IAM user and apply the required permissions

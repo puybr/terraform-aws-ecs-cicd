@@ -1,7 +1,3 @@
-variable "aws_region" {
-  default = "eu-west-2"
-}
-
 variable "az_count" {
   default = 1
 }

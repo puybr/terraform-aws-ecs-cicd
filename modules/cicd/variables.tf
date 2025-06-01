@@ -1,7 +1,3 @@
-variable "aws_region" {
-  default = "eu-west-2"
-}
-
 variable "app_name" {
   description = "Name of the app"
   default     = "nodejs-express"
@@ -26,26 +22,6 @@ variable "repo_owner" {
 
 variable "repo_branch" {
   default = "temp"
-}
-
-variable "codebuild_role" {
-  type    = string
-  default = "codeBuildRole"
-}
-
-variable "codepipeline_role" {
-  type    = string
-  default = "codePipelineRole"
-}
-
-variable "codedeploy_role" {
-  type    = string
-  default = "codeDeployRole"
-}
-
-variable "ecs_task_execution_role" {
-  type    = string
-  default = "ecsTaskExecutionRole"
 }
 
 variable "codestar_connection_arn" {
