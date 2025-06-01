@@ -29,6 +29,7 @@ resource "aws_s3_bucket_acl" "codepipeline_bucket_acl" {
   acl        = "private"
 }
 
+# Module Blocks
 module "security" {
   source                       = "./modules/security"
   codebuild_role               = "codeBuildRole"
