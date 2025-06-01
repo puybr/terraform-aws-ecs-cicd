@@ -28,3 +28,11 @@ resource "aws_s3_bucket_acl" "codepipeline_bucket_acl" {
   bucket     = aws_s3_bucket.codepipeline_bucket.id
   acl        = "private"
 }
+
+module "security" {
+  source                       = "./modules/security"
+  codebuild_role               = "codeBuildRole"
+  codepipeline_role            = "codePipelineRole"
+  codedeploy_role              = "codeDeployRole"
+  ecs_task_execution_role_name = "ecsTaskExecutionRole"
+}
