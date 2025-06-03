@@ -9,8 +9,9 @@ data "aws_region" "current" {}
 
 # Locals
 locals {
-  account_id = data.aws_caller_identity.current.account_id
-  region     = data.aws_region.current.name
+  account_id    = data.aws_caller_identity.current.account_id
+  region        = data.aws_region.current.name
+  target_groups = ["blue", "green"]
 }
 
 # Create S3 bucket for codepipeline artifacts
