@@ -165,7 +165,7 @@ data "aws_lb_listener" "selected443" {
 }
 ```
 
-[Local Values](https://developer.hashicorp.com/terraform/language/values/locals)
+[Local Values](https://developer.hashicorp.com/terraform/language/values/locals):
 - A local value assigns a name to an expression, so you can use the name multiple times within a module instead of repeating the expression:
 ```sh
 # Retrieve the current region
