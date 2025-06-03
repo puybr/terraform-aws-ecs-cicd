@@ -165,6 +165,22 @@ data "aws_lb_listener" "selected443" {
 }
 ```
 
+[Local Values](https://developer.hashicorp.com/terraform/language/values/locals)
+- A local value assigns a name to an expression, so you can use the name multiple times within a module instead of repeating the expression:
+```sh
+# Retrieve the current region
+data "aws_region" "current" {}
+
+# Retreive current account ID
+data "aws_caller_identity" "current" {}
+
+# Locals
+locals {
+  account_id = data.aws_caller_identity.current.account_id
+  region     = data.aws_region.current.name
+}
+```
+
 ### Manage multiple environments
 1. Terraform Workspaces
 2. [Terragrunt](https://terragrunt.gruntwork.io/) (_3rd party thin wrapper on top of Terraform_)
