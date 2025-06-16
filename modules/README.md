@@ -59,7 +59,7 @@ sso_registration_scopes = sso:account:access
 
 #### _Option 5_ -  Use the `[default]` profile and omit the profile value from the provider
 
-##### Run `aws sts get-caller-identity`
+##### Run `aws sts get-caller-identity` to return details about the IAM user or role whose credentials are used to call the operation
 
 ### Terraform Local Setup
 - Install [Chocolatey](https://chocolatey.org/install)
