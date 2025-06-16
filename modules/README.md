@@ -17,7 +17,7 @@ export AWS_SESSION_TOKEN=*****
 ```
 
 #### _Option 3_ - Configure a new AWS CLI profile:
-- `aws configure --profile profile-name`
+- `aws configure --profile <profile-name>`
 ```sh
 # ~/.aws/credentials
 [profile-name]
@@ -32,7 +32,7 @@ output = json
 ```
 
 #### _Option 4_ - Configure a new profile with [IAM Identity Center](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html#sso-configure-profile-token-auto-sso) authentication (SSO):
-- `aws configure sso --profile profile-name`
+- `aws configure sso --profile <profile-name>`
 ```sh
 # ~/.aws/config
 [profile profile-name]
@@ -46,8 +46,8 @@ sso_region = eu-west-2
 sso_start_url = https://my-sso-portal.awsapps.com/start
 sso_registration_scopes = sso:account:access
 ```
-- `aws sso login --profile profile-name`
-- `aws sso logout --profile profile-name `
+- `aws sso login --profile <profile-name>`
+- `aws sso logout --profile <profile-name>`
 
 ##### Add the profile value to the provider block:
 ```sh
