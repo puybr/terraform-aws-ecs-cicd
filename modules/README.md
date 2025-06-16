@@ -55,8 +55,11 @@ sso_registration_scopes = sso:account:access
     profile = "profile-name"
 # }
 ```
+##### Run `aws configure list-profiles`
 
 #### _Option 5_ -  Use the `[default]` profile and omit the profile value from the provider
+
+##### Run `aws sts get-caller-identity`
 
 ### Terraform Local Setup
 - Install [Chocolatey](https://chocolatey.org/install)
