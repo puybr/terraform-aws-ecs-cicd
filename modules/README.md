@@ -142,17 +142,30 @@ $ tree
 [Module Blocks](https://developer.hashicorp.com/terraform/language/modules/syntax):
 - Add a module block to the "`main.tf`" file in the root module:
 ```sh
+# Module Blocks
 module "ecs-infra" {
-  # Path of the child module 
-  source = "../ecs-infra"
-  # Variables
+  source      = "../ecs-infra"
   environment = var.environment
 }
 
+module "backend" {
+  source = "./../../modules/common/backend"
+  backend = {
+    bucket                = "terraform-tfstate"
+    create_dynamodb_table = false
+    dynamodb_table        = null
+  }
+}
+
 # Outputs
+output "aws_s3_bucket" {
+  description = "Backend state bucket"
+  value       = module.backend.aws_s3_bucket
+}
+
 output "lb_listener_arn" {
   description = "ARN of the LB listener"
-  value = module.ecs-infra.lb_listener_arn
+  value       = module.ecs-infra.lb_listener_arn
 }
 ```
 
