@@ -149,7 +149,7 @@ module "ecs-infra" {
 }
 
 module "backend" {
-  source = "./../../modules/common/backend"
+  source = "../backend"
   backend = {
     bucket                = "terraform-tfstate"
     create_dynamodb_table = false
