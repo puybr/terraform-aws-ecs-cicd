@@ -88,7 +88,7 @@ Add the provider block to the "`main.tf`" file:
 ```tf
 # Configure the AWS Provider
 provider "aws" {
-  region  = var.aws_region
+  region  = "eu-west-2"
   profile = "profile-name"   <--- optional
   default_tags {
     tags = {
@@ -100,12 +100,6 @@ provider "aws" {
 ```
 Create the "`variables.tf`" file:
 ```tf
-variable "aws_region" {
-    description = "Default AWS region"
-    type        = string
-    default     = "eu-west-2"
-}
- 
 variable "environment" {
     description = "Default environment: dev, stag, prod"
     type        = string
