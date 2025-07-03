@@ -89,7 +89,13 @@ Add the provider block to the "`main.tf`" file:
 # Configure the AWS Provider
 provider "aws" {
   region = var.aws_region
-  profile = "profile-name"    <--- optional
+  profile = "profile-name"   <--- optional
+  default_tags {
+    tags = {
+      Terraform = "true"
+      ...
+    }
+  }
 }
 ```
 Create the "`variables.tf`" file:
