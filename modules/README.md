@@ -115,7 +115,7 @@ variable "environment" {
 variable "ecs_cluster_name" {
     description = "The ECS cluster name"
     type = string
-    default = "ecs-docker"
+    default = "ecs"
 }
 ```
 
