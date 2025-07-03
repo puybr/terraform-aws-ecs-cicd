@@ -214,16 +214,23 @@ locals {
 Separate Module Structure:
 ```
 $ tree
+$ tree
 .
+├── backend
+│   ├── dynamodb.tf
+│   ├── output.tf
+│   ├── s3.tf
+│   ├── variables.tf
 ├── ecs-infra
 │   ├── ecs.tf
+│   ├── output.tf
 │   ├── variables.tf
-├── prod
+├── test
 │   ├── main.tf
 │   ├── variables.tf
 │   ├── terraform.tfstate
 │   └── terraform.tfvars
-└── dev
+└── prod
     ├── main.tf
     ├── variables.tf
     ├── terraform.tfstate
