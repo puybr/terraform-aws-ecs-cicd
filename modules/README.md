@@ -214,7 +214,6 @@ locals {
 Separate Module Structure:
 ```
 $ tree
-$ tree
 .
 ├── backend
 │   ├── dynamodb.tf
