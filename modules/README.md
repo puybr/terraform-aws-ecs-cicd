@@ -143,11 +143,6 @@ $ tree
 - Add a module block to the "`main.tf`" file in the root module:
 ```sh
 # Module Blocks
-module "ecs-infra" {
-  source      = "../ecs-infra"
-  environment = var.environment
-}
-
 module "backend" {
   source = "../backend"
   backend = {
@@ -161,11 +156,6 @@ module "backend" {
 output "aws_s3_bucket" {
   description = "Backend state bucket"
   value       = module.backend.aws_s3_bucket
-}
-
-output "lb_listener_arn" {
-  description = "ARN of the LB listener"
-  value       = module.ecs-infra.lb_listener_arn
 }
 ```
 
@@ -213,10 +203,6 @@ $ tree
 │   ├── dynamodb.tf
 │   ├── output.tf
 │   ├── s3.tf
-│   ├── variables.tf
-├── ecs-infra
-│   ├── ecs.tf
-│   ├── output.tf
 │   ├── variables.tf
 ├── dev
 │   ├── main.tf
