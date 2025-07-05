@@ -218,7 +218,7 @@ $ tree
 │   ├── ecs.tf
 │   ├── output.tf
 │   ├── variables.tf
-├── test
+├── dev
 │   ├── main.tf
 │   ├── variables.tf
 │   ├── terraform.tfstate
