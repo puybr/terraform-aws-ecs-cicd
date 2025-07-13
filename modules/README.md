@@ -319,7 +319,7 @@ terraform state mv module.ecs.aws_ecs_service.example[\"$1\"] module.ecs.aws_ecs
 ```
 - [Import](https://developer.hashicorp.com/terraform/cli/import) existing resources:
 ```sh
-terraform import module.example.aws_ecs_cluster.main test-ecs-cluster
+terraform import module.example.aws_ecs_cluster.example test-ecs-cluster
 ```
 
 ## Terraform Workspaces
