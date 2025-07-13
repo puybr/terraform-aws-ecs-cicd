@@ -1,4 +1,4 @@
-00# AWS Terraform
+# AWS Terraform
 
 ### AWS CLI Setup
 #### _Option 1_ - Add the AWS access secret keys directly to the provider block:
@@ -295,7 +295,7 @@ terraform state show 'module.example.aws_ecs_service.example[\"<app>\"]'
 
 ### State Manipulation
 - Pull the remote state:
-   - terraform state pull >! backup.tfstate`
+   - `terraform state pull >! backup.tfstate`
 - Make a backup of the state file
 - Copy the state over to the new location
 - Migrate the Terraform state file from one backend to another:
