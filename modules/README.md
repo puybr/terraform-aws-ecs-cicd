@@ -294,9 +294,8 @@ terraform state show 'module.example.aws_ecs_service.example[\"<app>\"]'
 ```
 
 ### State Manipulation
-- Pull the remote state:
+- Make a backup of the state file:
    - `terraform state pull >! backup.tfstate`
-- Make a backup of the state file
 - Copy the state over to the new location
 - Migrate the Terraform state file from one backend to another:
    - `terraform init -migrate-state`
