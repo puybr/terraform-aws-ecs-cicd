@@ -296,7 +296,7 @@ terraform state show 'module.example.aws_ecs_service.example[\"<app>\"]'
 ### State Manipulation
 - Make a backup of the state file:
    - `terraform state pull >! backup.tfstate`
-- Copy the state over to the new location
+- Make another copy the state file and copy over to the new folder location
 - Migrate the Terraform state file from one backend to another:
    - `terraform init -migrate-state`
 - [Move/rename](https://developer.hashicorp.com/terraform/cli/commands/state/mv) the Terraform state:
