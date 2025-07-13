@@ -315,7 +315,7 @@ set -eo pipefail
 source=$1
 dest=$2
         
-terraform state mv module.ecs.aws_ecs_service.example[\"$1\"] module.ecs.aws_ecs_service.example[\"$2\"]
+terraform state mv module.example.aws_ecs_service.example[\"$1\"] module.example.aws_ecs_service.example[\"$2\"]
 ```
 - [Import](https://developer.hashicorp.com/terraform/cli/import) existing resources:
 ```sh
