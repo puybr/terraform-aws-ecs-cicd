@@ -1,4 +1,4 @@
-# AWS Terraform
+00# AWS Terraform
 
 ### AWS CLI Setup
 #### _Option 1_ - Add the AWS access secret keys directly to the provider block:
@@ -298,9 +298,10 @@ terraform state show 'module.ecs.aws_ecs_service.example[\"<app>\"]'
 - Make a backup of the state file
 - Copy the state over to the new location
 - Migrate the Terraform state file from one backend to another:
-`terraform init -migrate-state`
+   - `terraform init -migrate-state`
 - [Remove](https://developer.hashicorp.com/terraform/cli/commands/state/rm) remote state objects: `terraform state rm`
-- Double check the state: `terraform state list`!!!
+- Double check the state:
+   - `terraform state list`
 - After confirming the state list is correct, run `terraform plan` to make sure there are no infrastructure changes
 - [Move/rename](https://developer.hashicorp.com/terraform/cli/commands/state/mv) the Terraform state: `terraform state mv`
     - `terraform state mv -dry-run module.ecs module.network`
