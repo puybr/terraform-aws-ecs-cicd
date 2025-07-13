@@ -300,15 +300,16 @@ terraform state show 'module.ecs.aws_ecs_service.example[\"<app>\"]'
 - Copy the state over to the new location
 - Migrate the Terraform state file from one backend to another:
    - `terraform init -migrate-state`
+- [Move/rename](https://developer.hashicorp.com/terraform/cli/commands/state/mv) the Terraform state:
+    - `terraform state mv`
+    - `terraform state mv -dry-run module.ecs
 - [Remove](https://developer.hashicorp.com/terraform/cli/commands/state/rm) remote state objects:
    - `terraform state rm`
 - Double check the state:
    - `terraform state list`
 - After confirming the state list is correct, run `terraform plan` to make sure there are no infrastructure changes
-- [Move/rename](https://developer.hashicorp.com/terraform/cli/commands/state/mv) the Terraform state:
-    - `terraform state mv`
-    - `terraform state mv -dry-run module.ecs module.network`
-    - Bulk move/rename:
+ module.network`
+- Bulk move/rename:
         ```sh
         #!/bin/bash
         set -eo pipefail
