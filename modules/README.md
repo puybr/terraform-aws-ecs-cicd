@@ -306,6 +306,10 @@ terraform state show 'module.example.aws_ecs_service.example[\"<app>\"]'
 - Double check the state:
    - `terraform state list`
 - After confirming the state list is correct, run `terraform plan` to make sure there are no infrastructure changes
+- [Import](https://developer.hashicorp.com/terraform/cli/import) existing resources:
+```sh
+terraform import module.example.aws_ecs_cluster.example default-ecs
+```
 - Bulk move/rename:
 ```sh
 #!/bin/bash
@@ -315,10 +319,6 @@ source=$1
 dest=$2
         
 terraform state mv module.example.aws_ecs_service.example[\"$1\"] module.example.aws_ecs_service.example[\"$2\"]
-```
-- [Import](https://developer.hashicorp.com/terraform/cli/import) existing resources:
-```sh
-terraform import module.example.aws_ecs_cluster.example default-ecs
 ```
 
 #### Delete a key from the backend DynamoDB table:
