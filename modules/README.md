@@ -284,7 +284,7 @@ terraform state show 'module.example.aws_ecs_service.example[\"<app>\"]'
 # terraform {
     backend "s3" {
     bucket             = "components-tfstate"
-    key                = "state/components.tfstate"
+    key                = "env/components.tfstate"
     region             = "eu-west-2"
     dynamodb_table     = "components_tf_lockid"
     encrypt            = true
@@ -321,16 +321,16 @@ terraform state mv module.example.aws_ecs_service.example[\"$1\"] module.example
 terraform import module.example.aws_ecs_cluster.example default-ecs
 ```
 
-#### Delete an item from the DynamoDB:
+#### Delete a key from the backend DynamoDB table:
 - `aws dynamodb scan --table-name terraform_tf_lockid --profile <profile-name>`
 - Create the key file `key.json`:
--    ```json
+    ```json
     {
         "LockID": {
             "S": "<bucket>/<env>/<component>.tfstate-md5"
         }
     }
-``` 
+    ```
 - `aws dynamodb delete-item --table-name terraform_tf_lockid --region <region> --key file://key.json --profile <profile-name>`
 
 ## Terraform Workspaces
