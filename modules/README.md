@@ -322,16 +322,16 @@ terraform state mv module.example.aws_ecs_service.example[\"$1\"] module.example
 ```
 
 #### Delete a key from the backend DynamoDB table:
-- `aws dynamodb scan --table-name terraform_tf_lockid --profile <profile-name>`
+- `aws dynamodb scan --table-name <table-name> --profile <profile-name>`
 - Create the key file `key.json`:
     ```json
     {
         "LockID": {
-            "S": "<bucket>/<env>/<component>.tfstate-md5"
+            "S": "<bucket-name>/<env>/<components>.tfstate-md5"
         }
     }
     ```
-- `aws dynamodb delete-item --table-name terraform_tf_lockid --region <region> --key file://key.json --profile <profile-name>`
+- `aws dynamodb delete-item --table-name <table-name> --region <region> --key file://key.json --profile <profile-name>`
 
 ## Terraform Workspaces
 - Terraform starts with a single "`default`" workspace that cannot be deleted:
